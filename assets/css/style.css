@@ -4,17 +4,17 @@
 
 @font-face {
     font-family: header;
-    src: url('../fonts/Mali-Bold.ttf');
+    src: url('../fonts/Overpass-Bold.ttf');
 }
   
 @font-face {
     font-family: body;
-    src: url('../fonts/Mali-Regular.ttf');
+    src: url('../fonts/Overpass-Regular.ttf');
 }
     
 @font-face {
     font-family: accent;
-    src: url('../fonts/Mali-Light.ttf');
+    src: url('../fonts/Overpass-Light.ttf');
 }
 
 /* ------------------- VARIABLES ------------------- */
@@ -46,6 +46,24 @@
     --quinary-color: #687864;
 }
 
+/* ------------------- VARIABLES ------------------- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* @media screen and (min-width: 320px) {
@@ -56,9 +74,63 @@
 
 } */
 
-/* @media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 7vh;
+        width: 100vw;
+        font: var(--header-large);
+        color: var(--quaternary-color);
+        background-color: var(--primary-color);
+    }
 
-} */
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 25%;
+        background-color: var(--tertiary-color);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    main {
+        height: 100%;
+        width: 75%;
+    }
+
+    .currentWeather {
+        height: 20%;
+        width: 100%;
+        background-color: var(--quaternary-color);
+    }
+
+    .weatherForecast {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        background-color: var(--quinary-color);
+    }
+}
 
 /* @media screen and (min-width: 1025px) {
 
