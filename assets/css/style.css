@@ -1,5 +1,22 @@
 /* BASE DESIGN BASED ON APPEARENCE ON GALAXY FOLD (280px) */
 
+/* ___________________ FONTS ____________________________ */
+
+@font-face {
+    font-family: header;
+    src: url('../fonts/Mali-Bold.ttf');
+}
+  
+@font-face {
+    font-family: body;
+    src: url('../fonts/Mali-Regular.ttf');
+}
+    
+@font-face {
+    font-family: accent;
+    src: url('../fonts/Mali-Light.ttf');
+}
+
 /* ------------------- VARIABLES ------------------- */
 
 :root {
