@@ -22,11 +22,11 @@
     --content-width: 85%;
     --content-max-width: 1000px;
 
-    --primary-color: #E85A4F;
-    --secondary-color: #E98074;
-    --tertiary-color: #8E8D8A;
-    --quaternary-color: #D8C3A5;
-    --quinary-color: #EAE7DC;
+    --primary-color: #F7F9FB;
+    --secondary-color: #8FC1E3;
+    --tertiary-color: #5085A5;
+    --quaternary-color: #31708E;
+    --quinary-color: #687864;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
