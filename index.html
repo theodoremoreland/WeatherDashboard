@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Weather Dashboard</title>
     
     <!-- Styles -->
@@ -15,6 +15,21 @@
     <script type="module" defer src="assets/js/main.js"></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Weather Deashboard</h1>
+    </header>
+    <aside>
+        <form>
+            <label for="search">Search for a city</label>
+            <input type="text" id="search" name="city">
+            <button>Search</button>
+        </form>
+        <div class="historyContainer">
+            <ul class="history">
+            </ul>
+        </div>
+    </aside>
+    <main class="weatherContainer">
+    </main>
 </body>
 </html>
