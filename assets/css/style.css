@@ -107,6 +107,33 @@ body {
         margin: 20px auto;
     }
 
+    label {
+        color: var(--primary-color);
+        font: var(--header-medium);
+        margin: 5px auto;
+    }
+
+    input {
+        width: 70%;
+        font: var(--body-xl);
+        margin: 5px auto;
+    }
+
+    button {
+        height: 40px;
+        width: 150px;
+        margin: 7px auto;
+        border-style: solid;
+        border-radius: 4px;
+        font: var(--accent-medium);
+        color: var(--primary-color);
+        background-color: var(--quaternary-color);
+    }
+
+    button:hover {
+        filter: brightness(1.2);
+    }
+
     main {
         height: 100%;
         width: 75%;
