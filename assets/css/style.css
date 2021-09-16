@@ -192,23 +192,23 @@ body {
     }
 
     .temp,
-    .wind,
-    .humidity {
+    .feel,
+    .icon {
         height: 100%;
     }
 
     .temp {
-        width: 40%;
+        width: 24%;
         background-color: var(--primary-color);
     }
 
-    .wind {
-        width: 30%;
+    .feel {
+        width: 38%;
         background-color: var(--secondary-color);
     }
 
-    .humidity {
-        width: 30%;
+    .icon {
+        width: 38%;
         background-color: var(--quaternary-color);
     }
 }
