@@ -186,7 +186,7 @@ body {
         flex: 0 0;
         flex-direction: row;
         align-items: center;
-        min-height: 300px;
+        min-height: 250px;
         width: 100%;
         border-bottom: black solid;
     }
