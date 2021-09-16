@@ -82,7 +82,7 @@ body {
         align-items: center;
         height: 7%;
         width: 100%;
-        font: var(--header-large);
+        font: var(--header-xl);
         color: var(--quaternary-color);
         background-color: var(--primary-color);
     }
@@ -138,7 +138,7 @@ body {
         height: 5px;
         width: 100%;
         border-style: none;
-        background-color: var(--quinary-color);
+        background-color: black;
     }
 
     .historyContainer {
@@ -172,13 +172,44 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 80%;
         width: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
-        background-color: var(--quinary-color);
+        background-color: black;
+    }
+
+    .forecast {
+        display: flex;
+        flex: 0 0;
+        flex-direction: row;
+        align-items: center;
+        min-height: 300px;
+        width: 100%;
+        border-bottom: black solid;
+    }
+
+    .temp,
+    .wind,
+    .humidity {
+        height: 100%;
+    }
+
+    .temp {
+        width: 40%;
+        background-color: var(--primary-color);
+    }
+
+    .wind {
+        width: 30%;
+        background-color: var(--secondary-color);
+    }
+
+    .humidity {
+        width: 30%;
+        background-color: var(--quaternary-color);
     }
 }
 
