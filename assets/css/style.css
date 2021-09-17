@@ -45,14 +45,14 @@
     --quaternary-color: #31708E;
     --quinary-color: #687864;
 
-    --uv-low: green;
-    --uv-medium: yellow;
-    --uv-high: orange;
-    --uv-very-high: red;
-    --uv-extremely-high: purple;
+    --low: green;
+    --medium: yellow;
+    --high: orange;
+    --very-high: red;
+    --extreme: purple;
 }
 
-/* ------------------- VARIABLES ------------------- */
+/* ------------------- GLOBAL ------------------- */
 
 html,
 body {
@@ -68,6 +68,25 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.low {
+    background-color: var(--low);
+}
+
+.medium {
+    background-color: var(--medium);
+}
+
+.high {
+    background-color: var(--high);
+}
+
+.very-high {
+    background-color: var(--very-high);
+}
+.extreme {
+    background-color: var(--extreme);
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -203,7 +222,6 @@ body {
         align-items: center;
         height: 100%;
         width: 8%;
-        background-color: var(--uv-medium);
     }
 
     .currentWeather .date {

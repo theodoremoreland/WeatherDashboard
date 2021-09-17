@@ -1,3 +1,20 @@
+// --uv-low: green;
+// --uv-medium: yellow;
+// --uv-high: orange;
+// --uv-very-high: red;
+// --uv-extremely-high: purple;
+
+export const determineUVlevel = (index) => {
+    let level;
+
+    if (index <= 2) level = "low";
+    else if (index <= 5) level = "medium";
+    else if (index <= 7) level = "high";
+    else if (index <= 10) level = "very-high";
+    else level = "extreme";
+
+    return level;
+}
 /**
  * Adds currentWeather elements and data to DOM
  * @param {Node} currentWeatherContainer - DOM node to add weather data and elements.
@@ -35,6 +52,7 @@ export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi
 
     div2.appendChild(uvLabelParagraph);
     div2.appendChild(uvValueParagraph);
+    div2.setAttribute("class", determineUVlevel(uvi));
 
     li1.textContent = `Temp: ${temp}`;
     li2.textContent = `Humidity: ${humidity}%`;
