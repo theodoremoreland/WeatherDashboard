@@ -33,7 +33,7 @@ export const fetchCoordinates = async (city, stateCode, countryCode) => {
  * @param {String} countryCode - Country code e.g. United States = USA. https://countrycode.org/.
  */
 export const extractWeatherData = async (city, stateCode, countryCode) => {
-    let weather = [];
+    let weather = { "current": {}, "forecast": []};
 
     const nameLatLon = await fetchCoordinates(city, stateCode, countryCode);
     const name = nameLatLon.name;
@@ -80,8 +80,8 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
             };
 
             
-            weather.push(current);
-            weather = [...weather, ...forecast];
+            weather.forecast.push(...forecast);
+            weather.current = current;
         })
         .catch(e => console.error(e))
         ;
