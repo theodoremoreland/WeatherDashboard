@@ -40,7 +40,7 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
     const lat = nameLatLon.lat;
     const lon = nameLatLon.lon;
 
-    const weatherPromise = fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+    const weatherPromise = fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => data)
         .catch(e => e)
