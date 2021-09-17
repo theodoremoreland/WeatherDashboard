@@ -10,9 +10,12 @@ const submitSearch = async (event) => {
     let weatherData;
     
     const searchValue = document.querySelector("input").value;
-    const [city, stateCode, countryCode] = searchValue.split(",");
+    let [city, stateCode, countryCode] = searchValue.split(",");
 
-    await extractWeatherData(city, stateCode.trim(), countryCode.trim())
+    stateCode = stateCode ? stateCode.trim() : undefined;
+    countryCode = countryCode ? countryCode.trim() : undefined;
+
+    await extractWeatherData(city, stateCode, countryCode)
         .then(data => {
             displayCurrentWeather(currentWeatherContainer, data[0]);
         })
