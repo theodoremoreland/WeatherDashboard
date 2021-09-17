@@ -44,6 +44,12 @@
     --tertiary-color: #5085A5;
     --quaternary-color: #31708E;
     --quinary-color: #687864;
+
+    --uv-low: green;
+    --uv-medium: yellow;
+    --uv-high: orange;
+    --uv-very-high: red;
+    --uv-extremely-high: purple;
 }
 
 /* ------------------- VARIABLES ------------------- */
@@ -196,8 +202,8 @@ body {
         justify-content: space-around;
         align-items: center;
         height: 100%;
-        width: 10%;
-        background-color: #687864;
+        width: 8%;
+        background-color: var(--uv-medium);
     }
 
     .currentWeather .date {
@@ -206,12 +212,13 @@ body {
     }
 
     .currentWeather .uvLabel {
+        font: var(--header-small);
         writing-mode: vertical-rl;
         text-orientation: upright;
     }
 
     .currentWeather .uvValue {
-
+        font: var(--body-large);
     }
 
     .currentWeather div:nth-of-type(3) {
@@ -221,7 +228,7 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 30%;
+        width: 35%;
     }
 
     .currentWeather li {
