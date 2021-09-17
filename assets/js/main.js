@@ -1,4 +1,4 @@
 import { extractWeatherData } from "./scripts/fetchWeatherData.js";
 
-extractWeatherData()
+extractWeatherData("Dallas", "TX", "USA")
     .then(data => console.log(data));

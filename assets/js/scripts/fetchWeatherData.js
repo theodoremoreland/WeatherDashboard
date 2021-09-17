@@ -1,10 +1,46 @@
 const weatherIconURL = "http://openweathermap.org/img/wn/";
+const apiKey = "9608ba5f1ed8baf0a21f603a93d58b5a";
+
+/**
+ * Return a Promise object with name and coordinates (lat, lon) for given city.
+ * @param {String} city - The employee who is responsible for the project.
+ * @param {String} stateCode - State abbreviation (US only) https://www.nrcs.usda.gov/wps/portal/nrcs/detail/tx/home/?cid=nrcs143_013696.country
+ * @param {String} countryCode - Country code e.g. United States = USA. https://countrycode.org/.
+ */
+export const fetchCoordinates = async (city, stateCode, countryCode) => {
+    const stateCodeParam = stateCode ? `,${stateCode}` : "";
+    const countryCodeParam = countryCode ? `,${countryCode}` : "";
+    const endpoint = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${stateCodeParam}${countryCodeParam}&limit=1&appid=${apiKey}`;
+
+    return fetch(endpoint)
+        .then(response => response.json())
+        .then(data => (
+            {
+                name: data[0].name,
+                lat: data[0].lat,
+                lon: data[0].lon,
+            }
+        ))
+        .catch(e => e)
+        ;
+};
 
 
-export const extractWeatherData = async () => {
+/**
+ * Return a Promise object with name, date, uvi, temp, humidity, windSpeed, feelsLike, and weatherIcon for the current date + 7 days for given city.
+ * @param {String} city - The employee who is responsible for the project.
+ * @param {String} stateCode - State abbreviation (US only) https://www.nrcs.usda.gov/wps/portal/nrcs/detail/tx/home/?cid=nrcs143_013696.country
+ * @param {String} countryCode - Country code e.g. United States = USA. https://countrycode.org/.
+ */
+export const extractWeatherData = async (city, stateCode, countryCode) => {
     let weather = [];
 
-    const weatherPromise = fetch("https://api.openweathermap.org/data/2.5/onecall?lat=32.7668&lon=-96.7836&appid=9608ba5f1ed8baf0a21f603a93d58b5a")
+    const nameLatLon = await fetchCoordinates(city, stateCode, countryCode);
+    const name = nameLatLon.name;
+    const lat = nameLatLon.lat;
+    const lon = nameLatLon.lon;
+
+    const weatherPromise = fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => data)
         .catch(e => e)
@@ -21,6 +57,7 @@ export const extractWeatherData = async () => {
             const weatherIcon = weatherIconURL + data.current.weather[0].icon + "@2x.png";
             const forecast = data.daily.splice(1).map(day =>  (
                 {
+                    name,
                     date: new Date(day.dt * 1000).toDateString(),
                     uvi: day.uvi,
                     temp : day.temp.day,
@@ -32,6 +69,7 @@ export const extractWeatherData = async () => {
             ));
 
             const current = {
+                name,
                 date,
                 uvi,
                 temp,
