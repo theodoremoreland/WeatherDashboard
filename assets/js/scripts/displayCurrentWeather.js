@@ -1,9 +1,7 @@
-// --uv-low: green;
-// --uv-medium: yellow;
-// --uv-high: orange;
-// --uv-very-high: red;
-// --uv-extremely-high: purple;
-
+/**
+ * Returns string representing UV level (low, medium, high, very-high, or extreme)
+ * @param {Number} index - UV index
+ */
 export const determineUVlevel = (index) => {
     let level;
 
@@ -15,6 +13,7 @@ export const determineUVlevel = (index) => {
 
     return level;
 }
+
 /**
  * Adds currentWeather elements and data to DOM
  * @param {Node} currentWeatherContainer - DOM node to add weather data and elements.
