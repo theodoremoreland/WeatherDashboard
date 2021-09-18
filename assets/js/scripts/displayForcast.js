@@ -15,7 +15,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     const humidityHeader = document.createElement("h3");
 
     humidityIcon.classList.add("fas", "fa-tint");
-    humidityParagraph.textContent = `${humidity}`;
+    humidityParagraph.textContent = `${humidity}%`;
     humidityHeader.textContent = `Humidity`;
 
     humidityContainer.appendChild(humidityIcon);
@@ -28,7 +28,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     const windSpeedParagraph = document.createElement("p");
 
     windSpeedIcon.classList.add("fas", "fa-wind");
-    windSpeedParagraph.textContent = `${windSpeed}`;
+    windSpeedParagraph.textContent = `${windSpeed}mph`;
     windSpeedHeader.textContent = `Wind Speed`;
 
     windSpeedContainer.appendChild(windSpeedIcon);
@@ -40,8 +40,8 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     const feelsLikeHeader = document.createElement("h3");
     const feelsLikeParagraph = document.createElement("p");
 
-    feelsLikeIcon.classList.add("fas", "fa-tint");
-    feelsLikeHeader.textContent = `${feelsLike}`;
+    feelsLikeIcon.classList.add("fas", "fa-thermometer-half");
+    feelsLikeHeader.textContent = `${feelsLike}d`;
     feelsLikeParagraph.textContent = `Feels Like`;
 
     feelsLikeContainer.appendChild(feelsLikeIcon);
@@ -71,7 +71,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     const dateParagraph = document.createElement("p");
     const cityParagraph = document.createElement("p");
 
-    tempHeader.textContent = temp;
+    tempHeader.textContent = `${temp}d`;
     cityParagraph.textContent = name;
     dateParagraph.textContent = date;
 
