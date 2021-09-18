@@ -1,4 +1,37 @@
 /**
+ * Scrambled order of children nodes based on length of grandparent then appends to parent. 
+ * @param {Node} grandparent - Node that parent will be appended to.
+ * @param {Node} parent - Node that children will be appended to.
+ * @param {Array<Node>} children - Array of Nodes to be scrambled before appending.
+ */
+const scrambleAppendOrder = (grandparent, parent, children) => {
+    const currentNumberOfChildren = grandparent.children.length;
+    const [child1, child2, child3] = children;
+    let scrabbledChildren
+
+    if (currentNumberOfChildren % 5 === 0) {
+        scrabbledChildren = [child1, child2, child3];
+    }
+    else if (currentNumberOfChildren % 4 === 0) {
+        scrabbledChildren = [child2, child3, child1];
+    }
+    else if (currentNumberOfChildren % 3 === 0) {
+        scrabbledChildren = [child3, child1, child2];
+    }
+    else if (currentNumberOfChildren % 2 === 0) {
+        scrabbledChildren = [child2, child3, child1];
+    }
+    else if (currentNumberOfChildren % 1 === 0) {
+        scrabbledChildren = [child3, child1, child2];
+    }
+
+    for (const child of scrabbledChildren) {
+        parent.appendChild(child);
+    }
+}
+
+
+/**
  * Adds forecast weather elements and data to DOM
  * @param {Node} currentWeatherContainer - DOM node to add weather data and elements.
  * @param {Object} data - Data object, including name, date, uvi, temp, feelsLike, windSpeed, humidity and weatherIcon.
@@ -82,9 +115,8 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
 
     // end
     forecastWrapperElement.classList.add("forecast");
-    forecastWrapperElement.appendChild(metaContainer);
-    forecastWrapperElement.appendChild(weatherIconContainer);
-    forecastWrapperElement.appendChild(tempContainer);
-    
+
+    scrambleAppendOrder(forecastWeatherContainer, forecastWrapperElement, [metaContainer, weatherIconContainer, tempContainer]);
+
     forecastWeatherContainer.appendChild(forecastWrapperElement);
 }

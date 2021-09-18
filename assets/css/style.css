@@ -351,6 +351,18 @@ body {
     .icon p {
         font: var(--header-xl);
     }
+
+    .temp:nth-of-type(2n) {
+        order: 2;
+    }
+
+    .icon:nth-of-type(3n) {
+        order: 2;
+
+    }
+    .meta:nth-of-type(4n) {
+        order: 2;
+    }
 }
 
 /* @media screen and (min-width: 1025px) {
