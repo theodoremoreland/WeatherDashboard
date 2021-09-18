@@ -1,158 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Weather Dashboard</title>
+        <title>Weather Dashboard</title>
 
-    <!-- <a target="_blank" href="https://icons8.com/icon/117004/clouds">Clouds</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    
-    <!-- Styles -->
-    <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-        crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- <a target="_blank" href="https://icons8.com/icon/117004/clouds">Clouds</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        
+        <!-- Styles -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- JS -->
-    <script type="module" defer src="assets/js/main.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Weather Dashboard</h1>
-    </header>
-    <aside>
-        <form>
-            <label for="search">Search for a city</label>
-            <input type="text" id="search" name="city" placeholder="Saint Louis"/>
-            <button>Search</button>
-        </form>
-        <hr/>
-        <div class="historyContainer">
-            <h2>Search history</h2>
-            <ul class="history">
-                <li class="defaultHistory">No search history</li>
-            </ul>
-        </div>
-    </aside>
-    <main class="weatherContainer">
-        <section class="currentWeather">
-            <div>
-                <h2 class="city">New York</h2>
-                <p class="date">01/25/2200</p>
-            </div>
-            <div class="medium">
-                <p class="uvLabel">UV Index</p>
-                <p class="uvValue">0.45</p>
-            </div>
-            <div>
-                <ul>
-                    <li>Temp: 45d</li>
-                    <li>Wind: 45mph</li>
-                    <li>Humidity: 32%</li>
+        <!-- JS -->
+        <script type="module" defer src="assets/js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Weather Dashboard</h1>
+        </header>
+        <aside>
+            <form>
+                <label for="search">Search for a city</label>
+                <input type="text" id="search" name="city" placeholder="Saint Louis"/>
+                <button>Search</button>
+            </form>
+            <hr/>
+            <div class="historyContainer">
+                <h2>Search history</h2>
+                <ul class="history">
+                    <li class="defaultHistory">No search history</li>
                 </ul>
             </div>
-        </section>
-        <section class="weatherForecast">
-            <div class="forecast">
-                <div class="meta">
-                    <div class="humidity">
-                        <i class="fas fa-tint"></i>
-                        <h3>54%</h3>
-                        <p>Humidity</p>
-                    </div>
-                    <div class="wind">
-                        <i class="fas fa-wind"></i>
-                        <h3>54mph</h3>
-                        <p>Wind Speed</p>
-                    </div>
-                    <div class="feels-like">
-                        <i class="fas fa-thermometer-half"></i>
-                        <h3>54d</h3>
-                        <p>Feels Like</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""/>
-                    <p>Sunny</p>
-                </div>
-                <div class="temp">
-                    <h3>65degrees</h3>
-                    <p class="city">New York</p>
-                    <p class="date">01/22/2200</p>
-                </div>
-            </div>
-            <div class="forecast">
-                <div class="icon"></div>
-                <div class="temp">
-                    <h3></h3>
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <p></p>
-                </div>
-                <div class="meta">
-                    <div class="wind"></div>
-                    <div class="humidity"></div>
-                </div>
-            </div>
-            <div class="forecast">
-                <div class="temp">
-                    <h3></h3>
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <p></p>
-                </div>
-                <div class="meta">
-                    <div class="wind"></div>
-                    <div class="humidity"></div>
-                </div>
-                <div class="icon"></div>
-            </div>
-            <div class="forecast">
-                <div class="meta">
-                    <div class="wind"></div>
-                    <div class="humidity"></div>
-                </div>
-                <div class="icon"></div>
-                <div class="temp">
-                    <h3></h3>
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <p></p>
-                </div>
-            </div>
-            <div class="forecast">
-                <div class="icon"></div>
-                <div class="temp">
-                    <h3></h3>
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <p></p>
-                </div>
-                <div class="meta">
-                    <div class="wind"></div>
-                    <div class="humidity"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+        </aside>
+        <main class="weatherContainer">
+            <section class="currentWeather">
+              <!-- Current weather data goes here. -->
+            </section>
+            <section class="weatherForecast">
+              <!-- Weather forecast data goes here. -->
+            </section>
+        </main>
+    </body>
 </html>
