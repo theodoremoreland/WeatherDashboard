@@ -25,6 +25,10 @@ export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
+    const cityDateContainer = document.createElement("div");
+    const weatherIconDescriptionContainer = document.createElement("div");
+
+    const weatherIconElement = document.createElement("img");
 
     const ul = document.createElement("ul");
     const li1 = document.createElement("li");
@@ -34,16 +38,26 @@ export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi
 
     const cityHeader = document.createElement("h2");
     const dateParagraph = document.createElement("p");
+    const descriptionParagraph = document.createElement("p");
     const uvLabelParagraph = document.createElement("p");
     const uvValueParagraph = document.createElement("p");
 
     cityHeader.textContent = `${name}`;
     dateParagraph.textContent = `${date}`;
+    weatherIconElement.src = weatherIcon;
+    descriptionParagraph.textContent = description;
     cityHeader.setAttribute("class", "city");
     dateParagraph.setAttribute("class", "date");
+    descriptionParagraph.setAttribute("class", "description");
 
-    div1.appendChild(cityHeader);
-    div1.appendChild(dateParagraph);
+    cityDateContainer.appendChild(cityHeader);
+    cityDateContainer.appendChild(dateParagraph);
+
+    weatherIconDescriptionContainer.appendChild(weatherIconElement);
+    weatherIconDescriptionContainer.appendChild(descriptionParagraph);
+
+    div1.appendChild(cityDateContainer);
+    div1.appendChild(weatherIconDescriptionContainer);
 
     uvLabelParagraph.textContent = `UV Index`;
     uvValueParagraph.textContent = `${uvi}`;
