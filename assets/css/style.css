@@ -277,7 +277,7 @@ body {
     }
 
     .temp,
-    .feel,
+    .meta,
     .icon {
         height: 100%;
     }
@@ -306,7 +306,7 @@ body {
         padding-left: 10px;
     }
 
-    .feel {
+    .meta {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -315,22 +315,22 @@ body {
         background-color: var(--secondary-color);
     }
 
-    .feel > div {
+    .meta > div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .feel i {
+    .meta i {
         font-size: 3rem;
     }
 
-    .feel h3 {
+    .meta h3 {
         font: var(--header-medium);
     }
 
-    .feel p {
+    .meta p {
         font: var(--header-small);
     }
 
