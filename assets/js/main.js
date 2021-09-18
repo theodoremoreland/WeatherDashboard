@@ -11,6 +11,16 @@ const searchHistoryContainer = document.querySelector(".history"); // ul element
 
 displaySearchHistory(searchHistoryContainer);
 
+// const handleHistoryClick = (event) => {
+//     event.stopPropagation();
+
+//     const target = event.target;
+
+//     if (target.matches("li")) {
+
+//     }
+// }
+
 const submitSearch = async (event) => {
     event.preventDefault();
 
@@ -38,3 +48,4 @@ const submitSearch = async (event) => {
 }
 
 formElement.addEventListener("submit", submitSearch);
+searchHistoryContainer.addEventListener("click", handleHistoryClick);

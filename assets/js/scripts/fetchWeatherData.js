@@ -10,7 +10,7 @@ const apiKey = "9608ba5f1ed8baf0a21f603a93d58b5a";
 export const fetchCoordinates = async (city, stateCode, countryCode) => {
     const stateCodeParam = stateCode ? `,${stateCode}` : "";
     const countryCodeParam = countryCode ? `,${countryCode}` : "";
-    const endpoint = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${stateCodeParam}${countryCodeParam}&limit=1&appid=${apiKey}`;
+    const endpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${city}${stateCodeParam}${countryCodeParam}&limit=1&appid=${apiKey}`;
 
     return fetch(endpoint)
         .then(response => response.json())
