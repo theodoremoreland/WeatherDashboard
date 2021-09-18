@@ -11,6 +11,7 @@ export const displaySearchHistory = (ulElement) => {
         const li = document.createElement("li");
         li.classList.add("historicSearchValue");
         li.textContent = searchValue;
+        li.dataset.searchValue = searchValue;
         ulElement.appendChild(li);
     }
 }
