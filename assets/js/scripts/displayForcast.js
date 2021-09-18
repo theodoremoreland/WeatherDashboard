@@ -32,8 +32,8 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     windSpeedHeader.textContent = `Wind Speed`;
 
     windSpeedContainer.appendChild(windSpeedIcon);
-    windSpeedContainer.appendChild(windSpeedHeader);
     windSpeedContainer.appendChild(windSpeedParagraph);
+    windSpeedContainer.appendChild(windSpeedHeader);
 
     const feelsLikeContainer = document.createElement("div");
     const feelsLikeIcon = document.createElement("i");
