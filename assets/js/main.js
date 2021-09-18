@@ -1,4 +1,5 @@
 import { extractWeatherData } from "./scripts/fetchWeatherData.js";
+import { updateSearchHistory } from "./scripts/updateSearchHistory.js";
 import { displayCurrentWeather } from "./scripts/displayCurrentWeather.js";
 import { displayForecast } from "./scripts/displayForcast.js";
 import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
@@ -6,7 +7,7 @@ import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
 const formElement = document.querySelector("form");
 const currentWeatherContainer = document.querySelector(".currentWeather");
 const forecastWeatherContainer = document.querySelector(".weatherForecast");
-const searchHistoryContainer = document.querySelector(".history");
+const searchHistoryContainer = document.querySelector(".history"); // ul element for appended historic search values
 
 displaySearchHistory(searchHistoryContainer);
 
@@ -29,12 +30,7 @@ const submitSearch = async (event) => {
                 displayForecast(forecastWeatherContainer, forecast);
             }
 
-            const searchHistory = JSON.parse(localStorage.getItem("history")) || {};
-            localStorage.setItem(
-                "history",
-                JSON.stringify({...searchHistory, [new Date().now()] : searchValue})
-            );
-            
+            updateSearchHistory(searchValue, searchHistoryContainer);
         })
         .catch(e => console.error(e))
         ;
