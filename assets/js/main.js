@@ -17,8 +17,14 @@ const submitSearch = async (event) => {
 
     await extractWeatherData(city, stateCode, countryCode)
         .then(weatherData => {
+            forecastWeatherContainer.innerHTML = "";
+            
             displayCurrentWeather(currentWeatherContainer, weatherData.current);
-            displayForecast(forecastWeatherContainer, weatherData.forecast[0]);
+
+            for (const forecast of weatherData.forecast) {
+                displayForecast(forecastWeatherContainer, forecast);
+            }
+            
         })
         .catch(e => console.error(e))
         ;

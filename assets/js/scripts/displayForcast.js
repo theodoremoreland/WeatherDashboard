@@ -4,7 +4,7 @@
  * @param {Object} data - Data object, including name, date, uvi, temp, feelsLike, windSpeed, humidity and weatherIcon.
  */
 export const displayForecast = (forecastWeatherContainer, { name, date, uvi, temp, feelsLike, windSpeed, humidity, weatherIcon }) => {
-    forecastWeatherContainer.innerHTML = "";
+    const forecastWrapperElement = document.createElement("div");
 
     // meta container
     const metaContainer = document.createElement("div");
@@ -81,8 +81,10 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     tempContainer.appendChild(dateParagraph);
 
     // end
-    forecastWeatherContainer.classList.add("forecast");
-    forecastWeatherContainer.appendChild(metaContainer);
-    forecastWeatherContainer.appendChild(weatherIconContainer);
-    forecastWeatherContainer.appendChild(tempContainer);
+    forecastWrapperElement.classList.add("forecast");
+    forecastWrapperElement.appendChild(metaContainer);
+    forecastWrapperElement.appendChild(weatherIconContainer);
+    forecastWrapperElement.appendChild(tempContainer);
+    
+    forecastWeatherContainer.appendChild(forecastWrapperElement);
 }
