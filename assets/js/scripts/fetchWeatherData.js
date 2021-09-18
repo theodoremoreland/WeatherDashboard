@@ -55,6 +55,7 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
             const windSpeed = data.current.wind_speed;
             const feelsLike = data.current.feels_like;
             const weatherIcon = weatherIconURL + data.current.weather[0].icon + "@2x.png";
+            const description = data.current.weather[0].main;
             const forecast = data.daily.splice(1).map(day =>  (
                 {
                     name,
@@ -64,7 +65,8 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
                     humidity : day.humidity,
                     windSpeed : day.wind_speed,
                     feelsLike : day.feels_like.day,
-                    weatherIcon : weatherIconURL + day.weather.icon + "@2x.png"
+                    weatherIcon : weatherIconURL + day.weather[0].icon + "@2x.png",
+                    description: day.weather[0].main
                 }
             ));
 
@@ -76,7 +78,8 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
                 humidity,
                 windSpeed,
                 feelsLike,
-                weatherIcon
+                weatherIcon,
+                description
             };
 
             

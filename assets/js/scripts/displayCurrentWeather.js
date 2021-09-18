@@ -17,9 +17,9 @@ export const determineUVlevel = (index) => {
 /**
  * Adds currentWeather elements and data to DOM
  * @param {Node} currentWeatherContainer - DOM node to add weather data and elements.
- * @param {Object} data - Data object, including name, date, uvi, temp, windSpeed, humidity and weatherIcon.
+ * @param {Object} data - Data object, including name, date, uvi, temp, windSpeed, humidity weatherIcon, and description.
  */
-export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi, temp, windSpeed, humidity, weatherIcon }) => {
+export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi, temp, windSpeed, humidity, weatherIcon, description }) => {
     currentWeatherContainer.innerHTML = "";
 
     const div1 = document.createElement("div");

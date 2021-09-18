@@ -34,9 +34,9 @@ const scrambleAppendOrder = (grandparent, parent, children) => {
 /**
  * Adds forecast weather elements and data to DOM
  * @param {Node} currentWeatherContainer - DOM node to add weather data and elements.
- * @param {Object} data - Data object, including name, date, uvi, temp, feelsLike, windSpeed, humidity and weatherIcon.
+ * @param {Object} data - Data object, including name, date, uvi, temp, feelsLike, windSpeed, humidity weatherIcon, and description.
  */
-export const displayForecast = (forecastWeatherContainer, { name, date, uvi, temp, feelsLike, windSpeed, humidity, weatherIcon }) => {
+export const displayForecast = (forecastWeatherContainer, { name, date, uvi, temp, feelsLike, windSpeed, humidity, weatherIcon, description }) => {
     const forecastWrapperElement = document.createElement("div");
 
     // meta container
@@ -88,11 +88,12 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
 
     // weather icon container
     const weatherIconContainer = document.createElement("div");
-    const weatherIconElement = document.createElement("i");
+    const weatherIconElement = document.createElement("img");
     const weatherParagraph = document.createElement("p");
 
-    weatherIconElement.classList.add("fa", "fa-sun");
-    weatherParagraph.textContent = "Sunny";
+    weatherIconElement.classList.add("weatherIcon");
+    weatherIconElement.src = weatherIcon;
+    weatherParagraph.textContent = description;
 
     weatherIconContainer.classList.add("icon");
     weatherIconContainer.appendChild(weatherIconElement);
