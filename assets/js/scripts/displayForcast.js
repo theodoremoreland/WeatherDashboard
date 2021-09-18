@@ -77,8 +77,8 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
 
     tempContainer.classList.add("temp");
     tempContainer.appendChild(tempHeader);
-    tempContainer.appendChild(dateParagraph);
     tempContainer.appendChild(cityParagraph);
+    tempContainer.appendChild(dateParagraph);
 
     // end
     forecastWeatherContainer.classList.add("forecast");
