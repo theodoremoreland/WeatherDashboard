@@ -6,7 +6,10 @@
     align-items: center;
     height: 25%;
     width: 100%;
-    background-color: var(--quaternary-color);
+    color: white;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #1b1b1b 74%);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .currentWeather div:nth-of-type(1) {
