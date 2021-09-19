@@ -8,8 +8,11 @@ import { displaySearchHistory } from "./displaySearchHistory.js";
 export const updateSearchHistory = (searchValue, ulElement) => {
     const currentSearchHistory = JSON.parse(localStorage.getItem("history")) || [];
 
-    let updatedSearchHistory = new Set([...currentSearchHistory, searchValue]);
-    updatedSearchHistory = [...updatedSearchHistory];
+    let updatedSearchHistory = new Set([searchValue, ...currentSearchHistory]);
+    updatedSearchHistory = updatedSearchHistory.length < 8 
+        ? [...updatedSearchHistory]
+        : [...updatedSearchHistory].slice(0, 8)
+    ;
 
     localStorage.setItem("history", JSON.stringify(updatedSearchHistory));
 
