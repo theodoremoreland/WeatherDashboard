@@ -1,10 +1,10 @@
 /**
- * Scrambled order of children nodes based on length of grandparent then appends to parent. 
+ * Scrambles order of children nodes based on length of grandparent then appends to parent. 
  * @param {Node} grandparent - Node that parent will be appended to.
  * @param {Node} parent - Node that children will be appended to.
  * @param {Array<Node>} children - Array of Nodes to be scrambled before appending.
  */
-const scrambleAppendOrder = (grandparent, parent, children) => {
+const scrambleThenAppendChildren = (grandparent, parent, children) => {
     const currentNumberOfChildren = grandparent.children.length;
     const [child1, child2, child3] = children;
     let scrabbledChildren
@@ -121,7 +121,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     // end
     forecastWrapperElement.classList.add("forecast");
 
-    scrambleAppendOrder(forecastWeatherContainer, forecastWrapperElement, [metaContainer, weatherIconContainer, tempContainer]);
+    scrambleThenAppendChildren(forecastWeatherContainer, forecastWrapperElement, [metaContainer, weatherIconContainer, tempContainer]);
 
     forecastWeatherContainer.appendChild(forecastWrapperElement);
 }
