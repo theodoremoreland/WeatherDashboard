@@ -1,4 +1,5 @@
 import { extractWeatherData } from "./scripts/fetchWeatherData.js";
+import { validateSearchValue } from "./scripts/validateSearchValue.js";
 import { updateSearchHistory } from "./scripts/updateSearchHistory.js";
 import { displayCurrentWeather } from "./scripts/displayCurrentWeather.js";
 import { displayForecast } from "./scripts/displayForcast.js";
@@ -18,12 +19,18 @@ const handleClick = (event) => {
     const target = event.target;
 
     if (target.matches("li")) {
-        const searchValue = target.dataset.searchValue;
-        submitSearch(searchValue);
+        const searchValue = target.dataset.searchValue.trim();
+
+        if (validateSearchValue(searchValue)) {
+            submitSearch(searchValue);
+        }
     }
     else if (target.matches("button")) {
-        const searchValue = document.querySelector("input").value;
-        submitSearch(searchValue);
+        const searchValue = document.querySelector("input").value.trim();
+
+        if (validateSearchValue(searchValue)) {
+            submitSearch(searchValue);
+        }
     }
 }
 
