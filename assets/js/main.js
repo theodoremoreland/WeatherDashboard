@@ -12,6 +12,10 @@ const searchHistoryContainer = document.querySelector(".history"); // ul element
 
 displaySearchHistory(searchHistoryContainer);
 
+/**
+ * Handles click event then acquires searchValue from appropriate target before submitting search.
+ * @param {Event} event - Click Event object
+ */
 const handleClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
@@ -34,6 +38,10 @@ const handleClick = (event) => {
     }
 }
 
+/**
+ * Submits search then displays results
+ * @param {String} searchValue - The value for the user's requested search.
+ */
 const submitSearch = async (searchValue) => {
     let [city, stateCode, countryCode] = searchValue.split(",");
 

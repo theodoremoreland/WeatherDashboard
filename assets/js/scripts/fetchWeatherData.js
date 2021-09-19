@@ -3,7 +3,7 @@ const apiKey = "9608ba5f1ed8baf0a21f603a93d58b5a";
 
 /**
  * Return a Promise object with name and coordinates (lat, lon) for given city.
- * @param {String} city - The employee who is responsible for the project.
+ * @param {String} city - The name of the city.
  * @param {String} stateCode - State abbreviation (US only) https://www.nrcs.usda.gov/wps/portal/nrcs/detail/tx/home/?cid=nrcs143_013696.country
  * @param {String} countryCode - Country code e.g. United States = USA. https://countrycode.org/.
  */
