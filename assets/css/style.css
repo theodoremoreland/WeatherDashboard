@@ -114,6 +114,9 @@ input {
     width: 70%;
     font: var(--body-xl);
     margin: 5px auto;
+    color: var(--primary-color);
+    background-color: #2d282e;
+    background-image: linear-gradient(315deg, #2d282e 0%, #0d324d 74%);
 }
 
 button {
@@ -124,11 +127,11 @@ button {
     border-radius: 4px;
     font: var(--accent-medium);
     color: var(--primary-color);
-    background-color: var(--quaternary-color);
+    background-color: rgb(0, 0, 0);
 }
 
 button:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
 }
 
 hr {
