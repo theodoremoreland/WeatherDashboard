@@ -72,10 +72,10 @@ export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi
     div2.appendChild(uvValueParagraph);
     div2.setAttribute("class", determineUVlevel(uvi));
 
-    li1.textContent = `Temp: ${temp}d`;
+    li1.textContent = `Temp: ${temp}F`;
     li2.textContent = `Humidity: ${humidity}%`;
     li3.textContent = `Wind Speed: ${windSpeed}mph`;
-    li4.textContent = `Feels Like: ${feelsLike}d`;
+    li4.textContent = `Feels Like: ${feelsLike}F`;
 
     ul.appendChild(li1);
     ul.appendChild(li2);
