@@ -20,6 +20,10 @@ export const determineUVlevel = (index) => {
  * @param {Object} data - Data object, including name, date, uvi, temp, windSpeed, humidity, feelsLike, weatherIcon, and description.
  */
 export const displayCurrentWeather = (currentWeatherContainer, { name, date, uvi, temp, windSpeed, humidity, feelsLike, weatherIcon, description }) => {
+    if (!name || !date) {
+        return;
+    }
+
     currentWeatherContainer.innerHTML = "";
 
     const div1 = document.createElement("div");

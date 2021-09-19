@@ -37,6 +37,10 @@ const scrambleAppendOrder = (grandparent, parent, children) => {
  * @param {Object} data - Data object, including name, date, uvi, temp, feelsLike, windSpeed, humidity weatherIcon, and description.
  */
 export const displayForecast = (forecastWeatherContainer, { name, date, uvi, temp, feelsLike, windSpeed, humidity, weatherIcon, description }) => {
+    if (!name || !date) {
+        return;
+    }
+
     const forecastWrapperElement = document.createElement("div");
 
     // meta container
