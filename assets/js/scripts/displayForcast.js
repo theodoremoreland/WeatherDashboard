@@ -85,7 +85,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     feelsLikeContainer.appendChild(feelsLikeHeader);
     feelsLikeContainer.appendChild(feelsLikeParagraph);
     
-    metaContainer.classList.add("meta");
+    metaContainer.classList.add("meta", `${description.toLowerCase()}`);
     metaContainer.appendChild(humidityContainer);
     metaContainer.appendChild(windSpeedContainer);
     metaContainer.appendChild(feelsLikeContainer);
@@ -99,7 +99,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     weatherIconElement.src = weatherIcon;
     weatherParagraph.textContent = description;
 
-    weatherIconContainer.classList.add("icon");
+    weatherIconContainer.classList.add("icon", `${description.toLowerCase()}`);
     weatherIconContainer.appendChild(weatherIconElement);
     weatherIconContainer.appendChild(weatherParagraph);
 
@@ -113,7 +113,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     cityParagraph.textContent = name;
     dateParagraph.textContent = date;
 
-    tempContainer.classList.add("temp");
+    tempContainer.classList.add("temp", `${description.toLowerCase()}`);
     tempContainer.appendChild(tempHeader);
     tempContainer.appendChild(cityParagraph);
     tempContainer.appendChild(dateParagraph);
