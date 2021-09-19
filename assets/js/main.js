@@ -31,6 +31,7 @@ const handleClick = (event) => {
     }
     else if (target.matches("button")) {
         const searchValue = document.querySelector("input").value.trim();
+        document.querySelector("input").value = "";
 
         if (validateSearchValue(searchValue)) {
             submitSearch(searchValue);
