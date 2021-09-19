@@ -8,7 +8,7 @@ import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
 
 const bodyElement = document.querySelector("body");
 const currentWeatherContainer = document.querySelector(".currentWeather");
-const forecastWeatherContainer = document.querySelector(".weatherForecast");
+const forecastWeatherContainer = document.querySelector(".forecasts");
 const searchHistoryContainer = document.querySelector(".history"); // ul element for appended historic search values
 
 displaySearchHistory(searchHistoryContainer);

@@ -64,6 +64,80 @@ body {
     align-items: center;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    width: 100%;
+    font: var(--header-xl);
+    color: var(--primary-color);
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+
+main {
+    height: 93%;
+    width: 75%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 93%;
+    width: 25%;
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+}
+
+label {
+    color: var(--primary-color);
+    font: var(--header-medium);
+    text-align: center;
+    margin: 5px auto;
+}
+
+input {
+    width: 70%;
+    font: var(--body-xl);
+    margin: 5px auto;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    margin: 7px auto;
+    border-style: solid;
+    border-radius: 4px;
+    font: var(--accent-medium);
+    color: var(--primary-color);
+    background-color: var(--quaternary-color);
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+hr {
+    height: 2px;
+    width: 90%;
+    border-style: none;
+    background-color: black;
+}
+
 .low {
     background-color: #00b712;
     background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
@@ -83,6 +157,7 @@ body {
     background-color: #3f0d12;
     background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
 }
+
 .extreme {
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
@@ -98,296 +173,9 @@ body {
 
 } */
 
-@media screen and (min-width: 769px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 7%;
-        width: 100%;
-        font: var(--header-xl);
-        color: var(--primary-color);
-        background-color: #7f5a83;
-        background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-    }
+/* @media screen and (min-width: 769px) {
 
-    aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 93%;
-        width: 25%;
-        background-color: #0cbaba;
-        background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-        
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: auto;
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    label {
-        color: var(--primary-color);
-        font: var(--header-medium);
-        text-align: center;
-        margin: 5px auto;
-    }
-
-    input {
-        width: 70%;
-        font: var(--body-xl);
-        margin: 5px auto;
-    }
-
-    button {
-        height: 40px;
-        width: 150px;
-        margin: 7px auto;
-        border-style: solid;
-        border-radius: 4px;
-        font: var(--accent-medium);
-        color: var(--primary-color);
-        background-color: var(--quaternary-color);
-    }
-
-    button:hover {
-        filter: brightness(1.2);
-    }
-
-    hr {
-        height: 2px;
-        width: 90%;
-        border-style: none;
-        background-color: black;
-    }
-
-    .historyContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
-
-    .historyContainer h2 {
-        color: var(--primary-color);
-        font: var(--header-medium);
-    }
-
-    .historyContainer li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 100%;
-        margin: 25px 0px;
-        padding: 5px;
-        border-radius: 4px;
-        background-color: var(--primary-color);
-        font: var(--body-large);
-    }
-
-    .historyContainer li:hover {
-        filter: brightness(1.2);
-        z-index: 2;
-    }
-
-    main {
-        height: 93%;
-        width: 75%;
-    }
-
-    .currentWeather {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 25%;
-        width: 100%;
-        background-color: var(--quaternary-color);
-    }
-
-    .currentWeather div:nth-of-type(1) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-        width: 60%;
-    }
-
-    .currentWeather div:nth-of-type(1) div {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 50%;
-    }
-
-    .currentWeather .city {
-        padding-left: 25px;
-        font: var(--header-xxl);
-    }
-
-    .currentWeather .description {
-        font: var(--header-medium);
-    }
-
-    .currentWeather div:nth-of-type(2) {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
-        width: 8%;
-    }
-
-    .currentWeather .date {
-        padding-left: 25px;
-        font: var(--header-medium);
-    }
-
-    .currentWeather .uvLabel {
-        font: var(--header-small);
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
-
-    .currentWeather .uvValue {
-        font: var(--body-large);
-    }
-
-    .currentWeather div:nth-of-type(3) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 35%;
-    }
-
-    .currentWeather li {
-        font: var(--body-large);
-        padding: 15px;
-    }
-
-    .weatherForecast {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        height: 75%;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        background-color: #000000;
-        background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
-    }
-
-    .forecast {
-        display: flex;
-        flex: 0 0;
-        flex-direction: row;
-        align-items: center;
-        min-height: 250px;
-        max-height: 250px;
-        width: 100%;
-    }
-
-    .temp,
-    .meta,
-    .icon {
-        height: 100%;
-    }
-
-    .temp {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 38%;
-        background-color: var(--primary-color);
-    }
-
-    .temp > h3 {
-        font: var(--header-xxl);
-        padding-left: 10px;
-    }
-
-    .temp > p:nth-of-type(1) {
-        font: var(--body-xl);
-        padding-left: 10px;
-    }
-
-    .temp > p:nth-of-type(2) {
-        font: var(--body-medium);
-        padding-left: 10px;
-    }
-
-    .meta {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 38%;
-        background-color: var(--secondary-color);
-    }
-
-    .meta > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .meta i {
-        font-size: 3rem;
-    }
-
-    .meta h3 {
-        font: var(--header-medium);
-    }
-
-    .meta p {
-        font: var(--header-small);
-    }
-
-    .icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 24%;
-        background-color: var(--quaternary-color);
-    }
-
-    .icon i {
-        font-size: 6rem;
-    }
-
-    .icon p {
-        font: var(--header-xl);
-    }
-}
+} */
 
 /* @media screen and (min-width: 1025px) {
 
