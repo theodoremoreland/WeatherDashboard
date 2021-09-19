@@ -1,6 +1,7 @@
 import { extractWeatherData } from "./scripts/fetchWeatherData.js";
 import { validateSearchValue } from "./scripts/validateSearchValue.js";
 import { updateSearchHistory } from "./scripts/updateSearchHistory.js";
+import { clearSearchHistory } from "./scripts/clearSearchHistory.js";
 import { displayCurrentWeather } from "./scripts/displayCurrentWeather.js";
 import { displayForecast } from "./scripts/displayForcast.js";
 import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
@@ -13,7 +14,8 @@ const searchHistoryContainer = document.querySelector(".history"); // ul element
 displaySearchHistory(searchHistoryContainer);
 
 /**
- * Handles click event then acquires searchValue from appropriate target before submitting search.
+ * Handles click event then acquires searchValue from appropriate target before submitting search
+ * or clears search history.
  * @param {Event} event - Click Event object
  */
 const handleClick = (event) => {
@@ -29,13 +31,17 @@ const handleClick = (event) => {
             submitSearch(searchValue);
         }
     }
-    else if (target.matches("button")) {
+    else if (target.matches("#searchButton")) {
         const searchValue = document.querySelector("input").value.trim();
         document.querySelector("input").value = "";
 
         if (validateSearchValue(searchValue)) {
             submitSearch(searchValue);
         }
+    }
+    else if (target.matches("#clearHistoryButton")) {
+        clearSearchHistory();
+        displaySearchHistory(searchHistoryContainer);
     }
 }
 

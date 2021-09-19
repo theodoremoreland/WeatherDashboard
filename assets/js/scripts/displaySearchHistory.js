@@ -3,11 +3,11 @@
  * @param {Node} ulElement - Parent ul element to be appended to.
  */
 export const displaySearchHistory = (ulElement) => {
+    ulElement.innerHTML = "";
+    
     const searchHistory = JSON.parse(localStorage.getItem("history")) || [];
 
     if (searchHistory.length > 0) {
-        ulElement.innerHTML = "";
-
         for (const searchValue of searchHistory) {
             const li = document.createElement("li");
             li.classList.add("historicSearchValue");
@@ -15,5 +15,12 @@ export const displaySearchHistory = (ulElement) => {
             li.dataset.searchValue = searchValue;
             ulElement.appendChild(li);
         }
+    }
+    else {
+        const p = document.createElement("p");
+
+        p.textContent = "No search history";
+        p.classList.add("defaultSearchValue");
+        ulElement.appendChild(p);
     }
 }
