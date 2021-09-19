@@ -45,36 +45,36 @@
 }
 
 .temp > h3 {
-    font: var(--header-xxl);
+    font: var(--header-xl);
     padding-left: 10px;
 }
 
 .temp > p:nth-of-type(1) {
-    font: var(--body-xl);
+    font: var(--body-large);
     padding-left: 10px;
 }
 
 .temp > p:nth-of-type(2) {
-    font: var(--body-medium);
+    font: var(--body-small);
     padding-left: 10px;
 }
 
 .temp.clear {
-    background-color: #861657;
-    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);    
+    background-color: #78528C;
+    background-image: linear-gradient(326deg, #78528C 0%, #ffa69e 74%);    
 }
 
 .temp.clouds {
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
 }
 
 .temp.rain,
 .temp.thunderstorm,
 .temp.drizzle,
 .temp.mist {
-    background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+    background-color: #244D69;
+    background-image: linear-gradient(315deg, #244D69 0%, #0F191C 74%);
 }
 
 .temp.snow {
@@ -132,11 +132,11 @@
 }
 
 .meta h3 {
-    font: var(--header-medium);
+    font: var(--header-xs);
 }
 
 .meta p {
-    font: var(--header-small);
+    font: var(--header-xs);
 }
 
 .meta.clear {
@@ -195,12 +195,12 @@
 }
 
 .icon p {
-    font: var(--header-xl);
+    font: var(--header-medium);
 }
 
 .icon.clear {
-    background-color: #861657;
-    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);    
+    background-color: #3277DE;
+    background-image: linear-gradient(326deg, #3277DE 0%, #25213C 74%);    
 }
 
 .icon.clouds {
@@ -212,8 +212,9 @@
 .icon.thunderstorm,
 .icon.drizzle,
 .icon.mist {
-    background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+    color: var(--primary-color);
+    background-color: #0F191C;
+    background-image: linear-gradient(20deg, #0F191C 70%, #795241 150%);
 }
 
 .icon.snow {
