@@ -1,24 +1,17 @@
 # Weather Dashboard
-
-WHEN I search for a city
-
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-
-    the UV index is presented with a color that indicates whether the conditions are favorable, moderate, or severe
-
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-
-THEN that city is added to the search history
-
-WHEN I click on a city in the search history
-
-THEN I am again presented with current and future conditions for that city
-
+A dashboard for displaying weather data for a given city. Will display current weather and forecast for the next
+6 days.
 
 ### Technologies used
 - JavaScript (ES6)
 - HTML
 - CSS
-- [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data.
-- Uses `localStorage` to store persistent data.
+- [OpenWeather API](https://openweathermap.org/api/)
 - GitHub Pages
+
+### Future improvements
+- Functional / responsivess for small mobile devices (currently only responsive for tablets and medium to large desktops)
+
+# Screenshots
+
+<img src="presentation/thumbnail.png" width="700">
