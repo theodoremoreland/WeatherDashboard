@@ -15,7 +15,7 @@ displaySearchHistory(searchHistoryContainer);
 
 /**
  * Handles click event then acquires searchValue from appropriate target before submitting search
- * or clears search history.
+ * or clears search history or opens / closes menu for mobile devices.
  * @param {Event} event - Click Event object
  */
 const handleClick = (event) => {
@@ -42,6 +42,19 @@ const handleClick = (event) => {
     else if (target.matches("#clearHistoryButton")) {
         clearSearchHistory();
         displaySearchHistory(searchHistoryContainer);
+    }
+    else if (target.matches("#menuIcon")) {
+        const menuElement = document.querySelector("aside");
+        const menuIsOpen = menuElement.dataset.open === "true" ? true : false;
+
+        if (!menuIsOpen) {
+            menuElement.style.display = "flex";
+            menuElement.dataset.open = "true";
+        }
+        else {
+            menuElement.style.display = "none";
+            menuElement.dataset.open = "false";
+        }
     }
 }
 

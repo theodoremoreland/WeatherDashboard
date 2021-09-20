@@ -78,10 +78,14 @@ header {
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
-header img {
+header #menuIcon {
     position: fixed;
     right: 3%;
     margin-top: -5px;
+}
+
+header #menuIcon:active {
+    transform: scale(1.2);
 }
 
 main {
@@ -92,6 +96,13 @@ main {
 aside {
     display: none;
     position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80%;
+    width: 85%;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
 
 form {
@@ -186,7 +197,7 @@ hr {
         font: var(--header-medium);
     }
 
-    header img {
+    header #menuIcon {
         display: none;
     }
 
