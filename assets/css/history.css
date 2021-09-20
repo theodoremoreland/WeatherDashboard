@@ -53,6 +53,17 @@
 
 @media screen and (min-width: 1366px) {
     .historyContainer h2 {
+        font: var(--header-small);
+    }
+
+    .historyContainer li {
+        padding: 5px;
+        font: var(--body-medium);
+    }
+}
+
+@media screen and (min-width: 1814px) {
+    .historyContainer h2 {
         font: var(--header-medium);
     }
 
@@ -61,10 +72,6 @@
         font: var(--body-large);
     }
 }
-
-/* @media screen and (min-width: 1814px) {
-
-} */
 
 
 /* @media screen and (min-width: 3200px) {
