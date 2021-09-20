@@ -34,11 +34,16 @@
 
 .currentWeather .city {
     padding-left: 25px;
-    font: var(--header-xxl);
+    font: var(--header-large);
+}
+
+.currentWeather .date {
+    padding-left: 25px;
+    font: var(--header-xs);
 }
 
 .currentWeather .description {
-    font: var(--header-medium);
+    font: var(--header-xs);
 }
 
 .currentWeather div:nth-of-type(2) {
@@ -51,19 +56,14 @@
     width: 8%;
 }
 
-.currentWeather .date {
-    padding-left: 25px;
-    font: var(--header-medium);
-}
-
 .currentWeather .uvLabel {
-    font: var(--header-small);
+    font: var(--body-medium);
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 
 .currentWeather .uvValue {
-    font: var(--body-large);
+    font: var(--body-medium);
 }
 
 .currentWeather div:nth-of-type(3) {
@@ -77,6 +77,61 @@
 }
 
 .currentWeather li {
-    font: var(--body-large);
-    padding: 15px;
+    font: var(--body-medium);
+    padding: 10px;
 }
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* @media screen and (min-width: 320px) {
+
+} */
+
+/* @media screen and (min-width: 481px) {
+
+} */
+
+/* @media screen and (min-width: 769px) {
+
+} */
+
+/* @media screen and (min-width: 1025px) {
+
+} */
+
+@media screen and (min-width: 1366px) {
+    .currentWeather .city {
+        padding-left: 25px;
+        font: var(--header-xxl);
+    }
+    
+    .currentWeather .description {
+        font: var(--header-medium);
+    }
+
+    .currentWeather .date {
+        font: var(--header-medium);
+    }
+
+    .currentWeather .uvLabel {
+        font: var(--header-small);
+    }
+
+    .currentWeather .uvValue {
+        font: var(--body-large);
+    }
+
+    .currentWeather li {
+        font: var(--body-large);
+        padding: 15px;
+    }
+}
+
+/* @media screen and (min-width: 1814px) {
+
+} */
+
+
+/* @media screen and (min-width: 3200px) {
+
+} */
