@@ -14,4 +14,8 @@ A dashboard for displaying weather data for a given city. Will display current w
 
 # Screenshots
 
+## Default view (Galaxy Fold emulation)
+<img src="presentation/1.PNG" width="250">
+
+## Default view (desktop)
 <img src="presentation/thumbnail.png" width="700">
