@@ -3,7 +3,7 @@ import { validateSearchValue } from "./scripts/validateSearchValue.js";
 import { updateSearchHistory } from "./scripts/updateSearchHistory.js";
 import { clearSearchHistory } from "./scripts/clearSearchHistory.js";
 import { displayCurrentWeather } from "./scripts/displayCurrentWeather.js";
-import { displayForecast } from "./scripts/displayForcast.js";
+import { displayForecast } from "./scripts/displayForecast.js";
 import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
 
 const bodyElement = document.querySelector("body");

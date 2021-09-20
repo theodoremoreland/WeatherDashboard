@@ -7,25 +7,25 @@
 const scrambleThenAppendChildren = (grandparent, parent, children) => {
     const currentNumberOfChildren = grandparent.children.length;
     const [child1, child2, child3] = children;
-    let scrabbledChildren
+    let scrambledChildren;
 
     if (currentNumberOfChildren % 5 === 0) {
-        scrabbledChildren = [child1, child2, child3];
+        scrambledChildren = [child1, child2, child3];
     }
     else if (currentNumberOfChildren % 4 === 0) {
-        scrabbledChildren = [child2, child3, child1];
+        scrambledChildren = [child2, child3, child1];
     }
     else if (currentNumberOfChildren % 3 === 0) {
-        scrabbledChildren = [child3, child1, child2];
+        scrambledChildren = [child3, child1, child2];
     }
     else if (currentNumberOfChildren % 2 === 0) {
-        scrabbledChildren = [child2, child3, child1];
+        scrambledChildren = [child2, child3, child1];
     }
     else if (currentNumberOfChildren % 1 === 0) {
-        scrabbledChildren = [child3, child1, child2];
+        scrambledChildren = [child3, child1, child2];
     }
 
-    for (const child of scrabbledChildren) {
+    for (const child of scrambledChildren) {
         parent.appendChild(child);
     }
 }
