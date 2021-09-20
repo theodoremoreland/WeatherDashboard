@@ -32,6 +32,7 @@
     --body-large: 1.23rem body;
     --body-medium: 1rem body;
     --body-small: 0.9rem body;
+    --body-xs: 0.7rem body;
 
     --accent-medium: 1rem accent;
     --accent-small: 0.8rem accent;
