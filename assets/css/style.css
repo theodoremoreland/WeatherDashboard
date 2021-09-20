@@ -71,7 +71,7 @@ header {
     align-items: center;
     height: 7%;
     width: 100%;
-    font: var(--header-xl);
+    font: var(--header-medium);
     color: var(--primary-color);
     background-color: #7f5a83;
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
@@ -105,14 +105,14 @@ form {
 
 label {
     color: var(--primary-color);
-    font: var(--header-medium);
+    font: var(--header-xs);
     text-align: center;
     margin: 5px auto;
 }
 
 input {
     width: 70%;
-    font: var(--body-xl);
+    font: var(--body-medium);
     margin: 5px auto;
     color: var(--primary-color);
     background-color: #2d282e;
@@ -120,9 +120,10 @@ input {
 }
 
 button {
-    height: 40px;
-    width: 150px;
+    height: 35px;
+    width: 125px;
     margin: 7px auto;
+    padding: 2px;
     border-style: solid;
     border-radius: 4px;
     font: var(--accent-medium);
@@ -184,9 +185,25 @@ hr {
 
 } */
 
-/* @media screen and (min-width: 1366px) {
+@media screen and (min-width: 1366px) {
+    header {
+        font: var(--header-xl);
+    }
 
-} */
+    label {
+        font: var(--header-medium);
+    }
+    
+    input {
+        font: var(--body-xl);
+    }
+
+    button {
+        height: 40px;
+        width: 150px;
+        font: var(--accent-medium);
+    }
+}
 
 /* @media screen and (min-width: 1814px) {
 
