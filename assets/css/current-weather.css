@@ -114,11 +114,11 @@
     }
 
     .currentWeather .uvLabel {
-        font: var(--header-small);
+        font: var(--header-xs);
     }
 
     .currentWeather .uvValue {
-        font: var(--body-large);
+        font: var(--body-medium);
     }
 
     .currentWeather li {
