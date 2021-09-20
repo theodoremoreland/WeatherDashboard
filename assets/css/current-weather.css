@@ -33,18 +33,24 @@
 }
 
 .currentWeather .city {
-    padding-left: 25px;
-    font: var(--header-large);
+    padding-left: 15px;
+    font: var(--header-small);
 }
 
 .currentWeather .date {
-    padding-left: 25px;
-    font: var(--header-xs);
+    padding-left: 15px;
+    font: var(--body-small);
     text-align: center;
 }
 
+.currentWeather img {
+    margin-top: -25px;
+    height: 75px;
+    width: 75px;
+}
+
 .currentWeather .description {
-    font: var(--header-xs);
+    font: var(--body-medium);
 }
 
 .currentWeather div:nth-of-type(2) {
@@ -58,13 +64,13 @@
 }
 
 .currentWeather .uvLabel {
-    font: var(--body-small);
+    font: var(--body-xs);
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 
 .currentWeather .uvValue {
-    font: var(--body-medium);
+    font: var(--body-xs);
 }
 
 .currentWeather div:nth-of-type(3) {
@@ -78,8 +84,8 @@
 }
 
 .currentWeather li {
-    font: var(--body-medium);
-    padding: 10px;
+    font: var(--body-xs);
+    padding: 5px 0px 5px 4px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -92,9 +98,42 @@
 
 } */
 
-/* @media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
+    .currentWeather .city {
+        padding-left: 25px;
+        font: var(--header-large);
+    }
 
-} */
+    .currentWeather .date {
+        padding-left: 25px;
+        font: var(--header-xs);
+        text-align: center;
+    }
+
+    .currentWeather img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .currentWeather .description {
+        font: var(--header-xs);
+    }
+
+    .currentWeather .uvLabel {
+        font: var(--body-small);
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+    
+    .currentWeather .uvValue {
+        font: var(--body-medium);
+    }
+
+    .currentWeather li {
+        font: var(--body-medium);
+        padding: 10px;
+    }
+}
 
 /* @media screen and (min-width: 1025px) {
 
