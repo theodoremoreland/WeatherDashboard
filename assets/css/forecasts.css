@@ -122,7 +122,7 @@
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.836);
 }
 
-.meta > div {
+.meta div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,6 +134,7 @@
 }
 
 .meta h3 {
+    text-align: center;
     font: var(--body-medium);
 }
 
