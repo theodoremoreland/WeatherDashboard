@@ -11,7 +11,7 @@
 
 .historyContainer h2 {
     color: var(--primary-color);
-    font: var(--header-medium);
+    font: var(--header-small);
 }
 
 .historyContainer li {
@@ -22,13 +22,51 @@
     height: 50px;
     width: 100%;
     margin: 25px 0px;
-    padding: 5px;
+    padding: 3px;
     border-radius: 4px;
     background-color: #ffffff;
     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-    font: var(--body-large);
+    font: var(--body-small);
 }
 
 .historyContainer li:hover {
     filter: brightness(1.2);
 }
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* @media screen and (min-width: 320px) {
+
+} */
+
+/* @media screen and (min-width: 481px) {
+
+} */
+
+/* @media screen and (min-width: 769px) {
+
+} */
+
+/* @media screen and (min-width: 1025px) {
+
+} */
+
+@media screen and (min-width: 1366px) {
+    .historyContainer h2 {
+        font: var(--header-medium);
+    }
+
+    .historyContainer li {
+        padding: 5px;
+        font: var(--body-large);
+    }
+}
+
+/* @media screen and (min-width: 1814px) {
+
+} */
+
+
+/* @media screen and (min-width: 3200px) {
+
+} */
