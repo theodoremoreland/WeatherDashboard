@@ -40,6 +40,7 @@
 .currentWeather .date {
     padding-left: 25px;
     font: var(--header-xs);
+    text-align: center;
 }
 
 .currentWeather .description {
