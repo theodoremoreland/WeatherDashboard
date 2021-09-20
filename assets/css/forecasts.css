@@ -17,8 +17,8 @@
     flex: 0 0;
     flex-direction: row;
     align-items: center;
-    min-height: 250px;
-    max-height: 250px;
+    min-height: 150px;
+    max-height: 150px;
     width: 100%;
     border-bottom: 2px solid black;
 }
@@ -46,17 +46,17 @@
 }
 
 .temp > h3 {
-    font: var(--header-xxl);
+    font: var(--header-xl);
     padding-left: 15px;
 }
 
 .temp > p:nth-of-type(1) {
-    font: var(--body-xl);
+    font: var(--body-large);
     padding-left: 15px;
 }
 
 .temp > p:nth-of-type(2) {
-    font: var(--body-large);
+    font: var(--body-medium);
     padding-left: 15px;
 }
 
@@ -130,15 +130,15 @@
 }
 
 .meta i {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .meta h3 {
-    font: var(--header-xs);
+    font: var(--body-medium);
 }
 
 .meta p {
-    font: var(--header-xs);
+    font: var(--body-medium);
 }
 
 .meta.clear {
@@ -194,11 +194,11 @@
 }
 
 .icon i {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .icon p {
-    font: var(--header-medium);
+    font: var(--header-xs);
 }
 
 .icon.clear {
@@ -251,3 +251,72 @@
     background-color: #d3d3d3;
     background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);    
 }
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* @media screen and (min-width: 320px) {
+
+} */
+
+/* @media screen and (min-width: 481px) {
+
+} */
+
+/* @media screen and (min-width: 769px) {
+
+} */
+
+/* @media screen and (min-width: 1025px) {
+
+} */
+
+@media screen and (min-width: 1366px) {
+    .forecast {
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .temp > h3 {
+        font: var(--header-xxl);
+        padding-left: 15px;
+    }
+    
+    .temp > p:nth-of-type(1) {
+        font: var(--body-xl);
+        padding-left: 15px;
+    }
+    
+    .temp > p:nth-of-type(2) {
+        font: var(--body-large);
+        padding-left: 15px;
+    }
+
+    .meta i {
+        font-size: 3rem;
+    }
+    
+    .meta h3 {
+        font: var(--header-xs);
+    }
+    
+    .meta p {
+        font: var(--header-xs);
+    }
+
+    .icon i {
+        font-size: 6rem;
+    }
+    
+    .icon p {
+        font: var(--header-medium);
+    }
+}
+
+/* @media screen and (min-width: 1814px) {
+
+} */
+
+
+/* @media screen and (min-width: 3200px) {
+
+} */

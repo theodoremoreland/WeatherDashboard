@@ -57,7 +57,7 @@
 }
 
 .currentWeather .uvLabel {
-    font: var(--body-medium);
+    font: var(--body-small);
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
