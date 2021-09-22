@@ -79,7 +79,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
 
     feelsLikeIcon.classList.add("fas", "fa-thermometer-half");
     feelsLikeHeader.textContent = `Feels Like`;
-    feelsLikeParagraph.textContent = `${feelsLike}F`;
+    feelsLikeParagraph.textContent = `${feelsLike}°F`;
 
     feelsLikeContainer.appendChild(feelsLikeIcon);
     feelsLikeContainer.appendChild(feelsLikeParagraph);
@@ -110,7 +110,7 @@ export const displayForecast = (forecastWeatherContainer, { name, date, uvi, tem
     const dateParagraph = document.createElement("p");
     const cityParagraph = document.createElement("p");
 
-    tempHeader.textContent = `${temp}F`;
+    tempHeader.textContent = `${temp}°F`;
     cityParagraph.textContent = name;
     dateParagraph.textContent = date;
 
