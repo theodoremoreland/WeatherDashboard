@@ -10,7 +10,7 @@ A dashboard for displaying weather data for a given city. Will display current w
 - GitHub Pages
 
 ### Future improvements
-- Functional / responsivess for small mobile devices (currently only responsive for tablets and medium to large desktops)
+- Functional / responsivess for small mobile devices when rotated horizontally
 
 # Screenshots
 
