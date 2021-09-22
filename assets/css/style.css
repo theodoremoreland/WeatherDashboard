@@ -152,7 +152,7 @@ hr {
     height: 2px;
     width: 90%;
     border-style: none;
-    background-color: black;
+    background-color: var(--primary-color);
 }
 
 .low {
