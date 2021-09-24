@@ -41,8 +41,7 @@ export const extractWeatherData = async (city, stateCode, countryCode) => {
     const lon = nameLatLon.lon;
 
     if (name === "TypeError" || !lat || !lon) {
-        alert(`Could not find weather data for "${city}"`);
-        return weather;
+        throw new Error(`Could not find weather data for "${city}"`);
     }
 
     const weatherPromise = fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`)

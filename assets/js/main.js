@@ -80,7 +80,7 @@ const submitSearch = async (searchValue) => {
 
             updateSearchHistory(searchValue, searchHistoryContainer);
         })
-        .catch(e => console.error(e))
+        .catch(e => alert(e))
         ;
     
 }
