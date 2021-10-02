@@ -9,6 +9,17 @@
     overflow-y: scroll;
 }
 
+#closeWindowIcon {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    height: 25px;
+}
+
+#closeWindowIcon:active {
+    transform: scale(1.2);
+}
+
 .historyContainer h2 {
     color: var(--primary-color);
     font: var(--header-small);
@@ -51,6 +62,10 @@
 } */
 
 @media screen and (min-width: 769px) {
+    #closeWindowIcon {
+        display: none;
+    }
+
     .historyContainer li {
         height: 40px;
         width: 100%;

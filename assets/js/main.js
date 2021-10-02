@@ -43,7 +43,7 @@ const handleClick = (event) => {
         clearSearchHistory();
         displaySearchHistory(searchHistoryContainer);
     }
-    else if (target.matches("#menuIcon")) {
+    else if (target.matches("#menuIcon") || target.matches("#closeWindowIcon")) {
         const menuElement = document.querySelector("aside");
         const menuIsOpen = menuElement.dataset.open === "true" ? true : false;
 
