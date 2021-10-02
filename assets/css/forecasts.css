@@ -324,8 +324,8 @@
 
 @media screen and (min-width: 1366px) {
     .forecast {
-        min-height: 250px;
-        max-height: 250px;
+        min-height: 225px;
+        max-height: 225px;
     }
 
     .temp > h3 {

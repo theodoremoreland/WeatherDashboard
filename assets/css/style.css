@@ -55,6 +55,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 body {
@@ -63,6 +64,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0px auto;
+    max-width: 2160px;
 }
 
 header {
@@ -245,9 +248,12 @@ hr {
     }
 }
 
-/* @media screen and (min-width: 1814px) {
-
-} */
+@media screen and (min-width: 2161px) {
+    body {
+        border-left: 1px rgba(245, 245, 245, 0.561) solid;
+        border-right: 1px rgba(245, 245, 245, 0.561) solid;
+    }
+}
 
 
 /* @media screen and (min-width: 3200px) {
