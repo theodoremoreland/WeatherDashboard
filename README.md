@@ -18,4 +18,4 @@ A dashboard for displaying weather data for a given city. Will display current w
 <img src="presentation/1.PNG" width="250">
 
 ## Default view (desktop)
-<img src="presentation/thumbnail.png" width="700">
+<img src="presentation/2.PNG" width="700">
