@@ -20,3 +20,7 @@ A dashboard for displaying weather data for a given city. Will display current w
 
 ## Default view (desktop)
 <img src="presentation/2.PNG" width="700">
+
+
+## Default view - Animated (desktop)
+<img src="presentation/2.gif" width="500">
