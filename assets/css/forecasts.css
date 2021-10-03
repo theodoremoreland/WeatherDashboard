@@ -9,7 +9,6 @@
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 
 .forecast {
@@ -257,14 +256,6 @@
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-/* @media screen and (min-width: 320px) {
-
-} */
-
-/* @media screen and (min-width: 481px) {
-
-} */
-
 @media screen and (min-width: 769px) {
     .forecast {
         min-height: 150px;
@@ -318,18 +309,14 @@
     }
 }
 
-/* @media screen and (min-width: 1025px) {
-
-} */
-
 @media screen and (min-width: 1366px) {
     .forecast {
-        min-height: 225px;
-        max-height: 225px;
+        min-height: 210px;
+        max-height: 210px;
     }
 
     .temp > h3 {
-        font: var(--header-xxl);
+        font: var(--header-xl);
         padding-left: 15px;
     }
     
@@ -344,11 +331,11 @@
     }
 
     .meta i {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .meta h3 {
-        font: var(--header-xs);
+        font: var(--body-large);
     }
     
     .meta p {
@@ -360,15 +347,6 @@
     }
     
     .icon p {
-        font: var(--header-medium);
+        font: var(--header-small);
     }
 }
-
-/* @media screen and (min-width: 1814px) {
-
-} */
-
-
-/* @media screen and (min-width: 3200px) {
-
-} */
