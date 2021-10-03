@@ -53,14 +53,6 @@
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-/* @media screen and (min-width: 320px) {
-
-} */
-
-/* @media screen and (min-width: 481px) {
-
-} */
-
 @media screen and (min-width: 769px) {
     #closeWindowIcon {
         display: none;
