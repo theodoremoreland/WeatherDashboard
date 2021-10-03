@@ -186,14 +186,6 @@ hr {
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-/* @media screen and (min-width: 320px) {
-
-} */
-
-/* @media screen and (min-width: 481px) {
-
-} */
-
 @media screen and (min-width: 769px) {
     header {
         justify-content: center;
@@ -226,10 +218,6 @@ hr {
     }
 }
 
-/* @media screen and (min-width: 1025px) {
-
-} */
-
 @media screen and (min-width: 1366px) {
     header {
         font: var(--header-xl);
@@ -256,8 +244,3 @@ hr {
         border-right: 1px rgba(245, 245, 245, 0.561) solid;
     }
 }
-
-
-/* @media screen and (min-width: 3200px) {
-
-} */
