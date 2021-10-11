@@ -11,7 +11,7 @@ A dashboard for displaying weather data for a given city. Will display current w
 
 ### Future improvements
 - Functional / responsivess for small mobile devices when rotated horizontally
-- Implement better contrast on colors (e.g. white text on bright green / bright yellow for UV Index needs better contrast)
+- Implement better contrast on colors (e.g. white text on bright background images)
 - Downscale background images for faster load times
 - Update color scheme for unusual weather conditions in forecast component
 
