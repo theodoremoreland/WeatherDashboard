@@ -67,10 +67,16 @@
     font: var(--body-xs);
     writing-mode: vertical-rl;
     text-orientation: upright;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .currentWeather .uvValue {
     font: var(--body-xs);
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .currentWeather div:nth-of-type(3) {
@@ -130,7 +136,7 @@
 @media screen and (min-width: 1366px) {
     .currentWeather .city {
         padding-left: 25px;
-        font: var(--header-xl);
+        font: var(--header-large);
     }
     
     .currentWeather .description {
@@ -138,11 +144,11 @@
     }
 
     .currentWeather .date {
-        font: var(--header-medium);
+        font: var(--header-small);
     }
 
     .currentWeather .uvLabel {
-        font: var(--header-xs);
+        font: var(--body-medium);
     }
 
     .currentWeather .uvValue {
@@ -150,7 +156,7 @@
     }
 
     .currentWeather li {
-        font: var(--body-large);
+        font: var(--body-medium);
         padding: 15px;
     }
 }
