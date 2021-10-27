@@ -20,5 +20,11 @@ A dashboard for displaying weather data for a given city. Will display current w
 ## Default view (Galaxy Fold emulation)
 <img src="presentation/1.PNG" width="250">
 
-## Default view (desktop)
+## Default view - New York City (desktop)
 <img src="presentation/2.PNG" width="700">
+
+## North Pole (desktop)
+<img src="presentation/3.PNG" width="700">
+
+## International Falls (desktop)
+<img src="presentation/4.PNG" width="700">
