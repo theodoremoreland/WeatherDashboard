@@ -60,26 +60,26 @@
 }
 
 .temp.clear {
-    background-color: #78528C;
-    background-image: linear-gradient(326deg, #78528C 0%, #ffa69e 74%);    
+    background-color: #000C13;
+    background-image: linear-gradient(326deg, #000C13 0%, #276A9E 74%);    
 }
 
 .temp.clouds {
-    background-color: #537895;
-    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    background-color: #3B413F;
+    background-image: linear-gradient(315deg, #3B413F 0%, #3f3e41 74%);
 }
 
 .temp.rain,
 .temp.thunderstorm,
 .temp.drizzle,
 .temp.mist {
-    background-color: #244D69;
-    background-image: linear-gradient(315deg, #244D69 0%, #0F191C 74%);
+    background-color: #172a02;
+    background-image: linear-gradient(315deg, #181f10 0%, #000000 74%);
 }
 
 .temp.snow {
-    background-color: #f8f9d2;
-    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    background-color: #010F1F;
+    background-image: linear-gradient(315deg, #010F1F 0%, #958CE7 74%);
 }
 
 .temp.fog {
@@ -143,26 +143,26 @@
 
 .meta.clear {
     color: white;
-    background-image: url("../images/Clear/1.jpg");
+    background-image: url("../images/clear.jpg");
 }
 
 .meta.clouds {
-    background-image: url("../images/Clouds/2.jpg");
+    background-image: url("../images/clouds.jpg");
 }
 
 .meta.rain,
 .meta.thunderstorm,
 .meta.drizzle,
 .meta.mist {
-    background-image: url("../images/Rain/2.jpg");
+    background-image: url("../images/rain.jpg");
 }
 
 .meta.snow {
-    background-image: url("../images/Snow/1.jpg");
+    background-image: url("../images/snow.jpg");
 }
 
 .meta.fog {
-    background-image: url("../images/Fog/1.jpg");
+    background-image: url("../images/fog.jpg");
 }
 
 .meta.sand {
@@ -204,13 +204,13 @@
 
 .icon.clear {
     color: white;
-    background-color: #3277DE;
-    background-image: linear-gradient(326deg, #3277DE 0%, #25213C 74%);    
+    background-color: #000C13;
+    background-image: linear-gradient(326deg, #000C13 0%, #276A9E 74%);       
 }
 
 .icon.clouds {
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+    background-color: #000C13;
+    background-image: linear-gradient(315deg, #000C13 0%, #9b7456 74%);
 }
 
 .icon.rain,
@@ -219,12 +219,13 @@
 .icon.mist {
     color: var(--primary-color);
     background-color: #0F191C;
-    background-image: linear-gradient(20deg, #0F191C 70%, #795241 150%);
+    background-image: linear-gradient(20deg, #0F191C 70%, #000C13 150%);
 }
 
 .icon.snow {
-    background-color: #f8f9d2;
-    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    color: whitesmoke;
+    background-color: #022F4F;
+    background-image: linear-gradient(315deg, #022F4F 0%, #958CE7 74%);
 }
 
 .icon.fog {
