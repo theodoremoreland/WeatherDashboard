@@ -34,7 +34,7 @@
 
 .currentWeather .city {
     padding-left: 15px;
-    font: var(--header-small);
+    font: var(--header-xs);
 }
 
 .currentWeather .date {
