@@ -219,8 +219,8 @@
 .icon.drizzle,
 .icon.mist {
     color: var(--primary-color);
-    background-color: #0F191C;
-    background-image: linear-gradient(20deg, #181f10 70%, #000C13 150%);
+    background-color: #0c0c0c;
+    background-image: linear-gradient(20deg, #0c0c0c 70%, #172a02 150%);
 }
 
 .icon.snow {
