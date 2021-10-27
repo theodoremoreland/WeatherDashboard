@@ -66,7 +66,7 @@
 
 .temp.clouds {
     background-color: #3B413F;
-    background-image: linear-gradient(315deg, #3B413F 0%, #3f3e41 74%);
+    background-image: linear-gradient(315deg, #000000 0%, #3f3e41 74%);
 }
 
 .temp.rain,
@@ -209,8 +209,9 @@
 }
 
 .icon.clouds {
+    color: whitesmoke;
     background-color: #000C13;
-    background-image: linear-gradient(315deg, #000C13 0%, #9b7456 74%);
+    background-image: linear-gradient(315deg, #000C13 0%, #504843 90%);
 }
 
 .icon.rain,
@@ -219,7 +220,7 @@
 .icon.mist {
     color: var(--primary-color);
     background-color: #0F191C;
-    background-image: linear-gradient(20deg, #0F191C 70%, #000C13 150%);
+    background-image: linear-gradient(20deg, #181f10 70%, #000C13 150%);
 }
 
 .icon.snow {
