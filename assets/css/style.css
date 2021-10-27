@@ -78,7 +78,7 @@ header {
     font: var(--header-xs);
     color: var(--primary-color);
     background-color: #7f5a83;
-    background-image: url("../images/header-bg.jpg");
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     background-blend-mode: overlay;
 }
 
@@ -150,12 +150,7 @@ button {
     border-radius: 4px;
     font: var(--accent-medium);
     color: var(--primary-color);
-    background-color: #2d3436;
-    background-image: url("https://images.unsplash.com/photo-1612988952181-c995680479a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80");
-    background-blend-mode: color-burn;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.267);
 }
 
 button:hover {
