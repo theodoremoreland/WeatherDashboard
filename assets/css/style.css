@@ -77,9 +77,12 @@ header {
     width: 100%;
     font: var(--header-xs);
     color: var(--primary-color);
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    background-color: #0f0f0f;
+    background-image: url("../images/header-bg.jpg");
     background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header #menuIcon {
@@ -105,7 +108,7 @@ aside {
     align-items: center;
     height: 80%;
     width: 85%;
-    background-color: #2d3436;
+    background-color: #282828;
     background-image: url("../images/aside-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
