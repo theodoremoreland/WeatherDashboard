@@ -155,7 +155,7 @@ button {
     height: 28px;
     width: 115px;
     margin: 7px auto;
-    padding: 2px;
+    padding: 7px;
     border-style: none;
     border-radius: 15px;
     font: var(--accent-small);
