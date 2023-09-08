@@ -140,7 +140,7 @@ input {
     width: 70%;
     font: var(--body-medium);
     margin: 5px auto;
-    padding: 4px 10px 0px 10px;
+    padding: 7px;
     border-style: none;
     border-radius: 15px;
     color: var(--primary-color);
@@ -152,13 +152,13 @@ input:focus {
 }
 
 button {
-    height: 35px;
-    width: 125px;
+    height: 28px;
+    width: 115px;
     margin: 7px auto;
     padding: 2px;
     border-style: none;
     border-radius: 15px;
-    font: var(--accent-medium);
+    font: var(--accent-small);
     color: var(--primary-color);
     background-color: var(--quaternary-color);
 }
@@ -250,8 +250,8 @@ hr {
     }
 
     button {
-        height: 40px;
-        width: 150px;
+        height: 30px;
+        width: 120px;
         font: var(--accent-medium);
     }
 }
