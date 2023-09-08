@@ -100,23 +100,18 @@ main {
     width: 100%;
 }
 
-aside {
+/* Both #desktop-menu and #mobile-menu are disabled by default (i.e. display = none). */
+.menu {
     display: none;
-    position: fixed;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 80%;
-    width: 85%;
     background-color: #282828;
     background-image: url("../images/aside-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-blend-mode: color-burn;
-    border: 1px solid rgba(245, 245, 245, 0.274);
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 form {
@@ -180,28 +175,47 @@ hr {
 }
 
 .low {
+    color: black;
     background-color: #00b712;
     background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
 }
 
 .medium {
+    color: black;
     background-color: #fbb034;
     background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
 }
 
 .high {
+    color: var(--primary-color);
     background-color: #ff4e00;
     background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);    
 }
 
 .very-high {
+    color: var(--primary-color);
     background-color: #3f0d12;
     background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
 }
 
 .extreme {
+    color: var(--primary-color);
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+}
+
+#desktop-menu {
+    height: 93%;
+    width: 25%;
+}
+
+#mobile-menu {
+    position: fixed;
+    height: 80%;
+    width: 85%;
+    border: 1px solid rgba(245, 245, 245, 0.274);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -223,16 +237,9 @@ hr {
         width: 75%;
     }
 
-    aside {
+    /* Desktop menu becomes available once reaching min width. */
+    #desktop-menu {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        position: initial;
-        height: 93%;
-        width: 25%;
-        border: none;
-        box-shadow: none;
     }
 }
 

@@ -65,14 +65,12 @@
 }
 
 .currentWeather .uvLabel {
-    color: black;
     font: var(--body-xs);
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 
 .currentWeather .uvValue {
-    color: black;
     font: var(--body-xs);
 }
 

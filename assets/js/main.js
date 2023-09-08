@@ -9,9 +9,9 @@ import { displaySearchHistory } from "./scripts/displaySearchHistory.js";
 const bodyElement = document.querySelector("body");
 const currentWeatherContainer = document.querySelector(".currentWeather");
 const forecastWeatherContainer = document.querySelector(".forecasts");
-const searchHistoryContainer = document.querySelector(".history"); // ul element for appended historic search values
+const searchHistoryContainers = document.querySelectorAll(".history"); // ul element for appended historic search values
 
-displaySearchHistory(searchHistoryContainer);
+displaySearchHistory(searchHistoryContainers);
 
 /**
  * Handles click event then acquires searchValue from appropriate target before submitting search
@@ -32,8 +32,23 @@ const handleClick = (event) => {
         }
     }
     else if (target.matches("#searchButton")) {
-        const searchValue = document.querySelector("input").value.trim();
-        document.querySelector("input").value = "";
+        // Grabs references to input for both menus.
+        const mobileSearchInputElement = document.querySelector("#mobile-menu #search");
+        const desktopSearchInputElement = document.querySelector("#desktop-menu #search");
+        // Determines which search input was used, defaults to desktop menu's if neither.
+        const searchInputElement = mobileSearchInputElement?.value ? mobileSearchInputElement : desktopSearchInputElement;
+        const searchValue = searchInputElement?.value.trim();
+
+        if (!searchInputElement) {
+            const errorMessage = 'Could not find value for search term.';
+
+            console.error(errorMessage);
+            alert(errorMessage);
+
+            return;
+        }
+
+        searchInputElement.value = "";
 
         if (validateSearchValue(searchValue)) {
             submitSearch(searchValue);
@@ -41,19 +56,21 @@ const handleClick = (event) => {
     }
     else if (target.matches("#clearHistoryButton")) {
         clearSearchHistory();
-        displaySearchHistory(searchHistoryContainer);
+        displaySearchHistory(searchHistoryContainers);
     }
     else if (target.matches("#menuIcon") || target.matches("#closeWindowIcon")) {
-        const menuElement = document.querySelector("aside");
+        const menuElement = document.querySelector("#mobile-menu");
         const menuIsOpen = menuElement.dataset.open === "true" ? true : false;
 
-        if (!menuIsOpen) {
-            menuElement.style.display = "flex";
-            menuElement.dataset.open = "true";
-        }
-        else {
+        if (menuIsOpen) {
+            // If menu is open, close menu.
             menuElement.style.display = "none";
             menuElement.dataset.open = "false";
+            
+        } else {
+            // Else, open menu.
+            menuElement.style.display = "flex";
+            menuElement.dataset.open = "true";
         }
     }
 }
@@ -68,21 +85,21 @@ const submitSearch = async (searchValue) => {
     stateCode = stateCode ? stateCode.trim() : undefined;
     countryCode = countryCode ? countryCode.trim() : undefined;
 
-    await extractWeatherData(city, stateCode, countryCode)
-        .then(weatherData => {
-            forecastWeatherContainer.innerHTML = "";
-
-            displayCurrentWeather(currentWeatherContainer, weatherData.current);
-
-            for (const forecast of weatherData.forecast) {
-                displayForecast(forecastWeatherContainer, forecast);
-            }
-
-            updateSearchHistory(searchValue, searchHistoryContainer);
-        })
-        .catch(e => alert(e))
-        ;
+    try {
+        const weatherData = await extractWeatherData(city, stateCode, countryCode)
+        
+        forecastWeatherContainer.innerHTML = "";
     
+        displayCurrentWeather(currentWeatherContainer, weatherData.current);
+    
+        for (const forecast of weatherData.forecast) {
+            displayForecast(forecastWeatherContainer, forecast);
+        }
+    
+        updateSearchHistory(searchValue, searchHistoryContainers);
+    } catch (e) {
+        alert(e);
+    }
 }
 
 bodyElement.addEventListener("click", handleClick);

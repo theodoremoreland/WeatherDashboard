@@ -31,11 +31,26 @@
             <h1>Weather Dashboard</h1>
             <img src="assets/images/hamburger.png" id="menuIcon" data-open="false" />
         </header>
-        <aside>
+        <aside id="desktop-menu" class="menu">
+            <form>
+                <label for="search">Search for a city</label>
+                <input type="text" id="search" name="city" value="" />
+                <button id="searchButton">Search</button>
+            </form>
+            <hr/>
+            <div class="historyContainer">
+                <h2>Search history</h2>
+                <ul class="history">
+                    <p class="defaultHistory">No search history</p>
+                </ul>
+                <button id="clearHistoryButton">Clear</button>
+            </div>
+        </aside>
+        <aside id="mobile-menu" class="menu">
             <form>
                 <img src="assets/images/close-window.png" id="closeWindowIcon" />
                 <label for="search">Search for a city</label>
-                <input type="text" id="search" name="city" value="Saint Louis" />
+                <input type="text" id="search" name="city" value="" />
                 <button id="searchButton">Search</button>
             </form>
             <hr/>
