@@ -2,6 +2,8 @@
 A dashboard for displaying weather data for a given city. Will display current weather and forecast for the next
 6 days.
 
+Visit here: https://theodoremoreland.github.io/WeatherDashboard/
+
 ### Technologies used
 - JavaScript (ES6)
 - HTML
