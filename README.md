@@ -31,9 +31,13 @@ Visit here: https://theodoremoreland.github.io/WeatherDashboard/
 
 <img src="presentation/2.PNG" width="700">
 
-## Results - Dallas (Desktop)
+## Results - Tokyo (Desktop)
 
 <img src="presentation/3.PNG" width="700">
+
+## Results - Miami (Desktop)
+
+<img src="presentation/8.PNG" width="700">
 
 ## Results - North Pole (Desktop)
 
