@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,11 @@
 
         <!-- <a target="_blank" href="https://icons8.com/icon/117004/clouds">Clouds</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
-        
+
         <!-- Styles -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-            crossorigin="anonymous"
-        />
+            crossorigin="anonymous" />
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/history.css" />
@@ -26,7 +24,11 @@
         <!-- JS -->
         <script type="module" defer src="assets/js/main.js"></script>
     </head>
+
     <body>
+        <div id="loading" style="display: none;">
+            <img class="animate-flicker" src="assets/images/cloud.svg" alt="Loading..."></img>
+        </div>
         <header>
             <h1>Weather Dashboard</h1>
             <img src="assets/images/hamburger.png" id="menuIcon" data-open="false" />
@@ -37,7 +39,7 @@
                 <input type="text" id="search" name="city" value="" />
                 <button id="searchButton">Search</button>
             </form>
-            <hr/>
+            <hr />
             <div class="historyContainer">
                 <h2>Search history</h2>
                 <ul class="history">
@@ -53,7 +55,7 @@
                 <input type="text" id="search" name="city" value="" />
                 <button id="searchButton">Search</button>
             </form>
-            <hr/>
+            <hr />
             <div class="historyContainer">
                 <h2>Search history</h2>
                 <ul class="history">
@@ -64,11 +66,12 @@
         </aside>
         <main class="weatherContainer">
             <section class="currentWeather">
-              <!-- Current weather data goes here. -->
+                <!-- Current weather data goes here. -->
             </section>
             <section class="forecasts">
-              <!-- Weather forecast data goes here. -->
+                <!-- Weather forecast data goes here. -->
             </section>
         </main>
     </body>
+
 </html>

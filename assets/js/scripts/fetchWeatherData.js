@@ -13,6 +13,13 @@ export const fetchCoordinates = async (city, stateCode, countryCode) => {
   const endpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${city}${stateCodeParam}${countryCodeParam}&limit=1&appid=${apiKey}`;
   const response = await fetch(endpoint);
   const data = await response.json();
+  const name = data[0].name;
+  const lat = data[0].lat;
+  const lon = data[0].lon;
+
+  if (name === "TypeError" || !lat || !lon) {
+    throw new Error(`Could not find weather data for "${city}"`);
+  }
 
   return {
     name: data[0].name,
@@ -21,22 +28,8 @@ export const fetchCoordinates = async (city, stateCode, countryCode) => {
   };
 };
 
-/**
- * Return a Promise object with name, date, uvi, temp, humidity, windSpeed, feelsLike, and weatherIcon for the current date + 7 days for given city.
- * @param {String} city - The employee who is responsible for the project.
- * @param {String} stateCode - State abbreviation (US only) https://www.nrcs.usda.gov/wps/portal/nrcs/detail/tx/home/?cid=nrcs143_013696.country
- * @param {String} countryCode - Country code e.g. United States = USA. https://countrycode.org/.
- */
-export const extractWeatherData = async (city, stateCode, countryCode) => {
+export const extractWeatherData = async ({ name, lat, lon }) => {
   const weather = { current: {}, forecast: [] };
-  const nameLatLon = await fetchCoordinates(city, stateCode, countryCode);
-  const name = nameLatLon.name;
-  const lat = nameLatLon.lat;
-  const lon = nameLatLon.lon;
-
-  if (name === "TypeError" || !lat || !lon) {
-    throw new Error(`Could not find weather data for "${city}"`);
-  }
 
   const weatherPromise = await fetch(
     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
