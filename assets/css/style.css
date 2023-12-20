@@ -86,7 +86,7 @@ header {
 }
 
 header #menuIcon {
-  position: fixed;
+  position: absolute;
   right: 3%;
   margin-top: -5px;
 }

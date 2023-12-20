@@ -16,6 +16,7 @@ const bodyElement = document.querySelector("body");
 const currentWeatherContainer = document.querySelector(".currentWeather");
 const forecastWeatherContainer = document.querySelector(".forecasts");
 const searchHistoryContainers = document.querySelectorAll(".history"); // ul element for appended historic search values
+const mobileMenuElement = document.querySelector("#mobile-menu");
 
 displaySearchHistory(searchHistoryContainers);
 
@@ -136,6 +137,8 @@ const submitSearch = async (searchValue) => {
     const weatherData = await extractWeatherData(coordinates);
 
     forecastWeatherContainer.innerHTML = "";
+    mobileMenuElement.dataset.open = "false";
+    mobileMenuElement.style.display = "none";
 
     displayCurrentWeather(currentWeatherContainer, weatherData.current);
 
