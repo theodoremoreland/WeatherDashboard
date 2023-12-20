@@ -1,157 +1,172 @@
 .currentWeather {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 25%;
-    min-height: 200px;
-    max-height: 350px;
-    width: 100%;
-    color: white;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #1b1b1b 74%);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  min-height: 200px;
+  max-height: 350px;
+  width: 100%;
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #1b1b1b 74%);
+}
+
+/* Pseudo element that adds drop shadow effect to current weather div thanks to z-index. */
+.currentWeather::after {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .currentWeather div:nth-of-type(1) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 60%;
 }
 
 .currentWeather div:nth-of-type(1) div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 
 .currentWeather .city {
-    padding-left: 15px;
-    font: var(--header-xs);
+  padding-left: 15px;
+  font: var(--header-xs);
 }
 
 .currentWeather .date {
-    padding-left: 15px;
-    font: var(--body-small);
-    text-align: center;
+  padding-left: 15px;
+  font: var(--body-small);
+  text-align: center;
 }
 
 .currentWeather img {
-    margin-top: -25px;
-    height: 75px;
-    width: 75px;
+  margin-top: -25px;
+  height: 75px;
+  width: 75px;
 }
 
 .currentWeather .description {
-    font: var(--body-medium);
+  font: var(--body-medium);
 }
 
 .currentWeather div:nth-of-type(2) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 8%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 8%;
 }
 
 .currentWeather .uvLabel {
-    font: var(--body-xs);
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+  font: var(--body-xs);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 .currentWeather .uvValue {
-    font: var(--body-xs);
+  font: var(--body-xs);
 }
 
 .currentWeather div:nth-of-type(3) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 35%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 35%;
 }
 
 .currentWeather li {
-    font: var(--body-xs);
-    padding: 5px 0px 5px 4px;
+  font: var(--body-xs);
+  padding: 5px 0px 5px 4px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
 @media screen and (min-width: 769px) {
-    .currentWeather .city {
-        padding-left: 25px;
-        font: var(--header-large);
-    }
+  .currentWeather .city {
+    padding-left: 25px;
+    font: var(--header-large);
+  }
 
-    .currentWeather .date {
-        padding-left: 25px;
-        font: var(--header-xs);
-        text-align: center;
-    }
+  .currentWeather .date {
+    padding-left: 25px;
+    font: var(--header-xs);
+    text-align: center;
+  }
 
-    .currentWeather img {
-        height: 100px;
-        width: 100px;
-    }
+  .currentWeather img {
+    height: 100px;
+    width: 100px;
+  }
 
-    .currentWeather .description {
-        font: var(--header-xs);
-    }
+  .currentWeather .description {
+    font: var(--header-xs);
+  }
 
-    .currentWeather .uvLabel {
-        font: var(--body-small);
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
-    
-    .currentWeather .uvValue {
-        font: var(--body-medium);
-    }
+  .currentWeather .uvLabel {
+    font: var(--body-small);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 
-    .currentWeather li {
-        font: var(--body-medium);
-        padding: 10px;
-    }
+  .currentWeather .uvValue {
+    font: var(--body-medium);
+  }
+
+  .currentWeather li {
+    font: var(--body-medium);
+    padding: 10px;
+  }
 }
 
 @media screen and (min-width: 1366px) {
-    .currentWeather .city {
-        padding-left: 25px;
-        font: var(--header-large);
-    }
-    
-    .currentWeather .description {
-        font: var(--header-medium);
-    }
+  .currentWeather .city {
+    padding-left: 25px;
+    font: var(--header-large);
+  }
 
-    .currentWeather .date {
-        font: var(--header-small);
-    }
+  .currentWeather .description {
+    font: var(--header-medium);
+  }
 
-    .currentWeather .uvLabel {
-        font: var(--body-medium);
-    }
+  .currentWeather .date {
+    font: var(--header-small);
+  }
 
-    .currentWeather .uvValue {
-        font: var(--body-medium);
-    }
+  .currentWeather .uvLabel {
+    font: var(--body-medium);
+  }
 
-    .currentWeather li {
-        font: var(--body-medium);
-        padding: 15px;
-    }
+  .currentWeather .uvValue {
+    font: var(--body-medium);
+  }
+
+  .currentWeather li {
+    font: var(--body-medium);
+    padding: 15px;
+  }
 }
