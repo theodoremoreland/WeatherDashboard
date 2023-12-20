@@ -298,6 +298,7 @@ hr {
 }
 
 #mobile-menu {
+  z-index: 3;
   position: fixed;
   height: 80%;
   width: 85%;
