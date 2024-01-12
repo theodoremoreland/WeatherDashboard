@@ -1,12 +1,3 @@
-body {
-  background: #012837;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-}
-
 .forecasts {
   display: flex;
   flex-direction: column;
