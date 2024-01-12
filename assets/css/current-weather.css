@@ -49,6 +49,7 @@
 }
 
 .currentWeather .city {
+  text-align: center;
   padding-left: 15px;
   font: var(--header-xs);
 }
