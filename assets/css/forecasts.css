@@ -44,6 +44,11 @@
   }
 }
 
+.forecast > div {
+  border-right: 1px solid rgba(255, 255, 255, 0.082);
+  border-left: 1px solid rgba(255, 255, 255, 0.082);
+}
+
 .temp,
 .meta,
 .icon {
@@ -81,53 +86,66 @@
   padding-left: 7px;
 }
 
-.temp.clear {
-  background-color: #000c13;
-  background-image: linear-gradient(326deg, #000c13 0%, #276a9e 74%);
+.temp.clear,
+.icon.clear {
+  background-color: #032844;
+  background: radial-gradient(circle, #032844 23%, #000c13 95%);
 }
 
-.temp.clouds {
-  background-color: #3b413f;
-  background-image: linear-gradient(315deg, #000000 0%, #3f3e41 74%);
+.temp.clouds,
+.icon.clouds {
+  background-color: #3f3e41;
+  background: radial-gradient(circle, #3f3e41 -41%, #000c13 95%);
 }
 
 .temp.rain,
 .temp.thunderstorm,
 .temp.drizzle,
-.temp.mist {
-  background-color: #172a02;
-  background-image: linear-gradient(315deg, #181f10 0%, #000000 74%);
+.temp.mist,
+.icon.rain,
+.icon.thunderstorm,
+.icon.drizzle,
+.icon.mist {
+  background-color: #181f10;
+  background: radial-gradient(circle, #181f10 -41%, #000c13 95%);
 }
 
-.temp.snow {
-  background-color: #010f1f;
-  background-image: linear-gradient(315deg, #010f1f 0%, #958ce7 74%);
+.temp.snow,
+.icon.snow {
+  background-color: #312786;
+  background: radial-gradient(circle, #312786 -41%, #000c13 95%);
 }
 
-.temp.fog {
-  background-color: #bdd4e7;
-  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+.temp.fog,
+.icon.fog {
+  background-color: #9fa7ad;
+  background: radial-gradient(circle, #9fa7ad -41%, #000c13 95%);
 }
 
-.temp.sand {
-  background-color: #f6f0c4;
-  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+.temp.sand,
+.icon.sand {
+  background-color: #b6a62f;
+  background: radial-gradient(circle, #b6a62f -41%, #000c13 95%);
 }
 
-.temp.dust {
+.temp.dust,
+.icon.dust {
   background-color: #2f4353;
-  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+  background: radial-gradient(circle, #2f4353 -41%, #000c13 95%);
 }
 
-.temp.ash {
-  background-color: #d3d3d3;
-  background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
+.temp.ash,
+.icon.ash {
+  background-color: #426a6d;
+  background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
 }
 
 .temp.squall,
-.temp.tornado {
-  background-color: #d3d3d3;
-  background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
+.temp.tornado,
+.icon.squall,
+.icon.tornado {
+  background-color: #426a6d;
+  background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
 }
 
 /* ----------------------------------------------------- META CONTAINER ----------------------------------------------------- */
@@ -212,7 +230,6 @@
   justify-content: center;
   align-items: center;
   width: 24%;
-  background-color: var(--quaternary-color);
 }
 
 .icon img {
@@ -226,14 +243,10 @@
 
 .icon.clear {
   color: white;
-  background-color: #000c13;
-  background-image: linear-gradient(326deg, #000c13 0%, #276a9e 74%);
 }
 
 .icon.clouds {
   color: whitesmoke;
-  background-color: #000c13;
-  background-image: linear-gradient(315deg, #000c13 0%, #504843 90%);
 }
 
 .icon.rain,
@@ -241,40 +254,10 @@
 .icon.drizzle,
 .icon.mist {
   color: var(--primary-color);
-  background-color: #0c0c0c;
-  background-image: linear-gradient(20deg, #0c0c0c 70%, #172a02 150%);
 }
 
 .icon.snow {
   color: whitesmoke;
-  background-color: #022f4f;
-  background-image: linear-gradient(315deg, #022f4f 0%, #958ce7 74%);
-}
-
-.icon.fog {
-  background-color: #bdd4e7;
-  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-}
-
-.icon.sand {
-  background-color: #f6f0c4;
-  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
-}
-
-.icon.dust {
-  background-color: #2f4353;
-  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
-}
-
-.icon.ash {
-  background-color: #d3d3d3;
-  background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
-}
-
-.icon.squall,
-.icon.tornado {
-  background-color: #d3d3d3;
-  background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
