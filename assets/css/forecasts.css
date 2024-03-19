@@ -26,7 +26,7 @@
     rgba(255, 255, 255, 0.178),
     var(--primary-color)
   );
-  background-size: 200% 400%;
+  background-size: 300% 400%;
   animation: bg-move 3.5s linear infinite;
 }
 
