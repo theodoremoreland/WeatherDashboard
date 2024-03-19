@@ -66,6 +66,7 @@ body {
   align-items: center;
   margin: 0px auto;
   max-width: 2160px;
+  font-family: accent;
 }
 
 header {
