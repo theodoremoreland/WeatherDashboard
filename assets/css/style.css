@@ -47,6 +47,32 @@
   --quinary-color: #687864;
 }
 
+/* ------------------- SCROLLBARS ------------------- */
+
+body::-webkit-scrollbar,
+ul::-webkit-scrollbar,
+section::-webkit-scrollbar,
+div::-webkit-scrollbar {
+  height: 3px;
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track,
+ul::-webkit-scrollbar-track,
+section::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+  background: #03293b; /* color of the tracking area */
+  border: none;
+}
+
+body::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb,
+section::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+  background-color: rgb(98, 98, 98); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
 /* ------------------- GLOBAL ------------------- */
 
 html,
@@ -97,8 +123,11 @@ header #menuIcon:active {
 }
 
 main {
-  height: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
+  height: 93%;
 }
 
 /* Both #desktop-menu and #mobile-menu are disabled by default (i.e. display = none). */
