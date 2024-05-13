@@ -7,6 +7,13 @@ A dashboard for displaying weather data for a given city. Will display current w
 
 Visit here: https://theodoremoreland.github.io/WeatherDashboard/
 
+## Table of contents
+
+- [Technologies used](#technologies-used)
+- [Screenshots](#screenshots)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
+
 ### Technologies used
 
 - JavaScript (ES6)
@@ -15,38 +22,30 @@ Visit here: https://theodoremoreland.github.io/WeatherDashboard/
 - [OpenWeather API](https://openweathermap.org/api/)
 - GitHub Pages
 
-# Screenshots (Mobile)
+# Screenshots
 
-## Results - Phoenix (Mobile)
+## Desktop
 
-<img src="presentation/1.PNG" width="250">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/1.png" width="800">
 
-## Search menu (Mobile)
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/2.png" width="800">
 
-<img src="presentation/7.PNG" width="250">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/3.png" width="800">
 
-# Screenshots (Desktop)
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/4.png" width="800">
 
-## Results - Saint Louis (Desktop)
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/5.png" width="800">
 
-<img src="presentation/2.PNG" width="700">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/6.png" width="800">
 
-## Results - Tokyo (Desktop)
+## Mobile
 
-<img src="presentation/3.PNG" width="700">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/7.png" width="300">
 
-## Results - Miami (Desktop)
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/8.png" width="300">
 
-<img src="presentation/8.PNG" width="700">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/9.png" width="300">
 
-## Results - North Pole (Desktop)
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/10.png" width="300">
 
-<img src="presentation/4.PNG" width="700">
-
-## Results - Egypt (Desktop)
-
-<img src="presentation/5.PNG" width="700">
-
-## Results - Phoenix (Desktop)
-
-<img src="presentation/6.PNG" width="700">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/11.png" width="300">
