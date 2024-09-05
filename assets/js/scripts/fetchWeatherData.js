@@ -32,7 +32,7 @@ export const extractWeatherData = async ({ name, lat, lon }) => {
   const weather = { current: {}, forecast: [] };
 
   const weatherPromise = await fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+    `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
   );
 
   const data = await weatherPromise.json();
