@@ -11,7 +11,7 @@
   width: 100%;
   color: white;
   background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #1b1b1b 74%);
+  background-image: linear-gradient(315deg, #000 0%, #242424 65%);
 }
 
 /* Pseudo element that adds drop shadow effect to current weather div thanks to z-index. */
