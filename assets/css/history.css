@@ -15,8 +15,15 @@
   position: absolute;
   right: 15px;
   top: 10px;
-  height: 25px;
-  mix-blend-mode: luminosity;
+  width: 28px;
+  height: 28px;
+  fill: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 #closeWindowIcon:active {
