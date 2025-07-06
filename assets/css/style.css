@@ -45,6 +45,8 @@
   --tertiary-color: #5085a5;
   --quaternary-color: #31708e;
   --quinary-color: #687864;
+
+  --background-color: #0f0f0f;
 }
 
 /* ------------------- SCROLLBARS ------------------- */
@@ -81,7 +83,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: var(--background-color);
 }
 
 body {
@@ -104,12 +106,7 @@ header {
   width: 100%;
   font: var(--header-xs);
   color: var(--primary-color);
-  background-color: #0f0f0f;
-  background-image: url("../images/header-bg.jpg");
-  background-blend-mode: overlay;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--background-color);
 }
 
 header #menuIcon {
@@ -136,12 +133,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #282828;
-  background-image: url("../images/aside-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: color-burn;
+  background-color: var(--background-color);
 }
 
 form {
