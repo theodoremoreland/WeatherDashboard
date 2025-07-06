@@ -43,10 +43,11 @@
   --primary-color: #f7f9fb;
   --secondary-color: #8fc1e3;
   --tertiary-color: #5085a5;
-  --quaternary-color: #31708e;
+  --quaternary-color: #024268;
   --quinary-color: #687864;
 
   --background-color: #0f0f0f;
+  --border-color: rgba(245, 245, 245, 0.561);
 }
 
 /* ------------------- SCROLLBARS ------------------- */
@@ -139,11 +140,16 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  height: auto;
+  gap: 10px;
+  height: 25%;
+  min-height: 200px;
+  max-height: 350px;
   width: 100%;
-  margin: 20px auto;
+  padding: 0;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px
 }
 
 label {
@@ -156,11 +162,11 @@ label {
 input {
   width: 70%;
   font: var(--body-medium);
-  margin: 5px auto;
-  padding: 7px;
+  padding: 7px 7px 5px 7px;
   border-style: none;
-  border-radius: 15px;
+  border-radius: 40px;
   color: var(--primary-color);
+  text-indent: 15px;
   background-color: #383838;
 }
 
@@ -378,7 +384,7 @@ hr {
 
 @media screen and (min-width: 2161px) {
   body {
-    border-left: 1px rgba(245, 245, 245, 0.561) solid;
-    border-right: 1px rgba(245, 245, 245, 0.561) solid;
+    border-left: 1px var(--border-color) solid;
+    border-right: 1px var(--border-color) solid;
   }
 }
