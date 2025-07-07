@@ -1,7 +1,7 @@
 # Weather Dashboard
 
-A dashboard for displaying weather data for a given city. Will display current weather and forecast for the next
-6 days.
+A dashboard for displaying weather data for a given city. The dashboard displays current weather and forecast for the next
+6 days. If enabled, the application automatically provides weather data for the client's current location via [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API).
 
 <img src="presentation/thumbnail.webp" width="650">
 
@@ -20,6 +20,7 @@ Visit here: https://theodoremoreland.github.io/WeatherDashboard/
 - HTML
 - CSS
 - [OpenWeather API](https://openweathermap.org/api/)
+- [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 - GitHub Pages
 
 ## Screenshots
