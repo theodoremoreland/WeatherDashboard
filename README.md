@@ -3,7 +3,7 @@
 A dashboard for displaying weather data for a given city. Will display current weather and forecast for the next
 6 days.
 
-<img src="presentation/thumbnail.png" width="650">
+<img src="presentation/thumbnail.webp" width="650">
 
 Visit here: https://theodoremoreland.github.io/WeatherDashboard/
 
