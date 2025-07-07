@@ -162,7 +162,7 @@ label {
 input {
   width: 70%;
   font: var(--body-medium);
-  padding: 7px 7px 5px 7px;
+  padding: 7px 7px 2px 7px;
   border-style: none;
   border-radius: 40px;
   color: var(--primary-color);
