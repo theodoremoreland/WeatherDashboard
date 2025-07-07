@@ -5,7 +5,7 @@ A dashboard for displaying weather data for a given city. The dashboard displays
 
 <img src="presentation/thumbnail.webp" width="650">
 
-Visit here: https://theodoremoreland.github.io/WeatherDashboard/
+[View the deployed application](https://theodoremoreland.github.io/WeatherDashboard/)
 
 ## Table of contents
 
