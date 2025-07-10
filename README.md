@@ -97,6 +97,6 @@ A dashboard for displaying weather data for a given city. The dashboard displays
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/17.png" width="250">
 
-#### Results 5 (Mobile)
+#### Updated search history (Mobile)
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/weather-dashboard/18.png" width="250">
