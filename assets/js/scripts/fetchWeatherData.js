@@ -1,4 +1,4 @@
-const weatherIconURL = "http://openweathermap.org/img/wn/";
+const weatherIconURL = "https://openweathermap.org/img/wn/";
 const apiKey = "9608ba5f1ed8baf0a21f603a93d58b5a";
 
 /**
