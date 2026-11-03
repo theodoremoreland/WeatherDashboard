@@ -95,13 +95,11 @@
 
 .temp.clear,
 .icon.clear {
-  background-color: #032844;
   background: radial-gradient(circle, #032844 23%, #000c13 95%);
 }
 
 .temp.clouds,
 .icon.clouds {
-  background-color: #3f3e41;
   background: radial-gradient(circle, #3f3e41 -41%, #000c13 95%);
 }
 
@@ -113,37 +111,31 @@
 .icon.thunderstorm,
 .icon.drizzle,
 .icon.mist {
-  background-color: #181f10;
   background: radial-gradient(circle, #181f10 -41%, #000c13 95%);
 }
 
 .temp.snow,
 .icon.snow {
-  background-color: #312786;
   background: radial-gradient(circle, #312786 -41%, #000c13 95%);
 }
 
 .temp.fog,
 .icon.fog {
-  background-color: #9fa7ad;
   background: radial-gradient(circle, #9fa7ad -41%, #000c13 95%);
 }
 
 .temp.sand,
 .icon.sand {
-  background-color: #b6a62f;
   background: radial-gradient(circle, #b6a62f -41%, #000c13 95%);
 }
 
 .temp.dust,
 .icon.dust {
-  background-color: #2f4353;
   background: radial-gradient(circle, #2f4353 -41%, #000c13 95%);
 }
 
 .temp.ash,
 .icon.ash {
-  background-color: #426a6d;
   background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
 }
 
@@ -151,7 +143,6 @@
 .temp.tornado,
 .icon.squall,
 .icon.tornado {
-  background-color: #426a6d;
   background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
 }
 

@@ -95,7 +95,7 @@ body {
   align-items: center;
   margin: 0px auto;
   max-width: 4096px;
-  font-family: accent;
+  font-family: accent, sans-serif;
 }
 
 header {
