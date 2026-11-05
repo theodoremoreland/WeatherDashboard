@@ -264,7 +264,7 @@
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1049px) {
   .forecast {
     min-height: 150px;
     max-height: 150px;
