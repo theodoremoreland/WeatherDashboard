@@ -46,8 +46,9 @@
   --quaternary-color: #024268;
   --quinary-color: #687864;
 
-  --background-color: #1a1a1a;
-  --border-color: rgba(245, 245, 245, 0.561);
+  --background-color: #090909;
+  /* Try the following instead for ^: 090909  */
+  --border-color: rgba(245, 245, 245, 0.199);
 }
 
 /* ------------------- SCROLLBARS ------------------- */
@@ -341,10 +342,20 @@ hr {
 
 @media screen and (min-width: 769px) {
   header {
-    justify-content: center;
+    position: relative;
+    justify-content: flex-start;
     align-items: center;
     height: 7%;
     font: var(--header-medium);
+    border-bottom: 1px var(--border-color) solid;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 100%;
+    }
   }
 
   header #menuIcon {
