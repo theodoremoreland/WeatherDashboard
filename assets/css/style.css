@@ -111,6 +111,22 @@ header {
   background-color: var(--background-color);
 }
 
+header #github-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-family: accent, sans-serif;
+  text-decoration: none;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+  color: var(--primary-color);
+  padding: 0 30px;
+}
+
 header #menuIcon {
   position: absolute;
   right: 3%;
@@ -343,7 +359,7 @@ hr {
 @media screen and (min-width: 769px) {
   header {
     position: relative;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 7%;
     font: var(--header-medium);

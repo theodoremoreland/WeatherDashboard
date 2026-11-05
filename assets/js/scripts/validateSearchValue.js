@@ -9,8 +9,7 @@ export const validateSearchValue = (searchValue) => {
     // Washington-on-the-Brazos
     let isValid = true;
     const hasNumber = /\d/;
-    // Matches "City", "City City", "City-City", "City City-City", or "City, State, Country".
-    const hasValidFormat = /^\w+ ?[A-z-]*$|^[A-z-]+ *, *[A-z-]+ *, *[A-z-]+ *$/; 
+    const values = searchValue.split(",");
 
     if (hasNumber.test(searchValue)) {
         alert("Invalid search. Search should not include numbers.");
@@ -24,8 +23,8 @@ export const validateSearchValue = (searchValue) => {
         alert("Invalid search. Search should contain at least 3 characters.");
         isValid = false;
     }
-    else if (!hasValidFormat.test(searchValue)) {
-        alert(`Invalid search. Search format should be either "City" or "City, State, Country".`);
+    else if (values.length > 3) {
+        alert(`Invalid search. Search format should be either "City", "City, Country", or "City, State, Country".`);
         isValid = false;
     }
 
