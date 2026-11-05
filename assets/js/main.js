@@ -64,7 +64,7 @@ const handleClick = (event) => {
   const target = event.target;
 
   if (target.matches("li")) {
-    const searchValue = target.dataset.searchValue.trim();
+    const searchValue = target?.dataset?.searchValue?.trim();
 
     if (validateSearchValue(searchValue)) {
       submitSearch(searchValue);

@@ -95,7 +95,7 @@
 
 .temp.clear,
 .icon.clear {
-  background: radial-gradient(circle, #032844 23%, #000c13 95%);
+  background: radial-gradient(circle, #062e50 -56%, var(--background-color) 95%);
 }
 
 .temp.clouds,

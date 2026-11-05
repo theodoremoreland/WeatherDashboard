@@ -46,8 +46,9 @@
   --quaternary-color: #024268;
   --quinary-color: #687864;
 
-  --background-color: #1a1a1a;
-  --border-color: rgba(245, 245, 245, 0.561);
+  --background-color: #090909;
+  /* Try the following instead for ^: 090909  */
+  --border-color: rgba(245, 245, 245, 0.199);
 }
 
 /* ------------------- SCROLLBARS ------------------- */
@@ -108,6 +109,22 @@ header {
   font: var(--header-xs);
   color: var(--primary-color);
   background-color: var(--background-color);
+}
+
+header #github-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-family: accent, sans-serif;
+  text-decoration: none;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+  color: var(--primary-color);
+  padding: 0 30px;
 }
 
 header #menuIcon {
@@ -341,10 +358,20 @@ hr {
 
 @media screen and (min-width: 769px) {
   header {
-    justify-content: center;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
     height: 7%;
     font: var(--header-medium);
+    border-bottom: 1px var(--border-color) solid;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 100%;
+    }
   }
 
   header #menuIcon {
