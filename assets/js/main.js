@@ -58,10 +58,14 @@ async function autoSearch(position) {
  * @param {Event} event - Click Event object
  */
 const handleClick = (event) => {
+  const target = event.target;
+
+  if (target.matches("a")) {
+    return;
+  }
+
   event.stopPropagation();
   event.preventDefault();
-
-  const target = event.target;
 
   if (target.matches("li")) {
     const searchValue = target?.dataset?.searchValue?.trim();
