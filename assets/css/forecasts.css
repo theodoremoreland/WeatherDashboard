@@ -256,7 +256,10 @@
 
 .icon.snow {
   color: whitesmoke;
-  filter: brightness(3);
+
+  img {
+    filter: brightness(3);
+  }
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
