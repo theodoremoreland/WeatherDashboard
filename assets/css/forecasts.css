@@ -100,7 +100,7 @@
 
 .temp.clouds,
 .icon.clouds {
-  background: radial-gradient(circle, #3f3e41 -41%, #000c13 95%);
+  background: radial-gradient(circle, #3f3e41 -41%, var(--background-color) 95%);
 }
 
 .temp.rain,
