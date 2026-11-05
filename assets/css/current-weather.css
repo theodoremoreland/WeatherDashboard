@@ -107,7 +107,7 @@
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1049px) {
   .currentWeather .city {
     padding-left: 25px;
     font: var(--header-large);
