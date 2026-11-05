@@ -111,39 +111,39 @@
 .icon.thunderstorm,
 .icon.drizzle,
 .icon.mist {
-  background: radial-gradient(circle, #181f10 -41%, #000c13 95%);
+  background: radial-gradient(circle, #333f2c -41%, var(--background-color) 95%);
 }
 
 .temp.snow,
 .icon.snow {
-  background: radial-gradient(circle, #312786 -41%, #000c13 95%);
+  background: radial-gradient(circle, #213d80 -41%, var(--background-color) 95%);
 }
 
 .temp.fog,
 .icon.fog {
-  background: radial-gradient(circle, #9fa7ad -41%, #000c13 95%);
+  background: radial-gradient(circle, #9fa7ad -41%, var(--background-color) 95%);
 }
 
 .temp.sand,
 .icon.sand {
-  background: radial-gradient(circle, #b6a62f -41%, #000c13 95%);
+  background: radial-gradient(circle, #b6a62f -41%, var(--background-color) 95%);
 }
 
 .temp.dust,
 .icon.dust {
-  background: radial-gradient(circle, #2f4353 -41%, #000c13 95%);
+  background: radial-gradient(circle, #2f4353 -41%, var(--background-color) 95%);
 }
 
 .temp.ash,
 .icon.ash {
-  background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
+  background: radial-gradient(circle, #426a6d -41%, var(--background-color) 95%);
 }
 
 .temp.squall,
 .temp.tornado,
 .icon.squall,
 .icon.tornado {
-  background: radial-gradient(circle, #426a6d -41%, #000c13 95%);
+  background: radial-gradient(circle, #426a6d -41%, var(--background-color) 95%);
 }
 
 /* ----------------------------------------------------- META CONTAINER ----------------------------------------------------- */
@@ -256,6 +256,7 @@
 
 .icon.snow {
   color: whitesmoke;
+  filter: brightness(3);
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
