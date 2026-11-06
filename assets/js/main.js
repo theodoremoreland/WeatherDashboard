@@ -76,10 +76,10 @@ const handleClick = (event) => {
   } else if (target.matches("#searchButton")) {
     // Grabs references to input for both menus.
     const mobileSearchInputElement = document.querySelector(
-      "#mobile-menu #search"
+      "#mobile-menu #search",
     );
     const desktopSearchInputElement = document.querySelector(
-      "#desktop-menu #search"
+      "#desktop-menu #search",
     );
     // Determines which search input was used, defaults to desktop menu's if neither.
     const searchInputElement = mobileSearchInputElement?.value
@@ -128,7 +128,7 @@ const handleClick = (event) => {
  * @param {String} searchValue - The value for the user's requested search.
  */
 const submitSearch = async (searchValue) => {
-  let [city, stateCode, countryCode] = searchValue.split(",");
+  let [city, stateCode, countryCode] = searchValue?.split(",");
 
   stateCode = stateCode ? stateCode.trim() : undefined;
   countryCode = countryCode ? countryCode.trim() : undefined;

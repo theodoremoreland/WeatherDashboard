@@ -1,5 +1,13 @@
 const weatherIconURL = "https://openweathermap.org/img/wn/";
 const apiKey = "9608ba5f1ed8baf0a21f603a93d58b5a";
+const validFormats = [
+  "St. Louis",
+  "St. Louis, USA",
+  "St. Louis, MO, USA",
+  "St. Louis, Missouri, USA",
+  "St. Louis, MO, United States",
+  "St. Louis, Missouri, United States",
+];
 
 /**
  * Return a Promise object with name and coordinates (lat, lon) for given city.
@@ -13,26 +21,34 @@ export const fetchCoordinates = async (city, stateCode, countryCode) => {
   const endpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${city}${stateCodeParam}${countryCodeParam}&limit=1&appid=${apiKey}`;
   const response = await fetch(endpoint);
   const data = await response.json();
-  const name = data[0].name;
-  const lat = data[0].lat;
-  const lon = data[0].lon;
 
-  if (name === "TypeError" || !lat || !lon) {
-    throw new Error(`Could not find weather data for "${city}"`);
+  try {
+    const name = data[0].name;
+    const lat = data[0].lat;
+    const lon = data[0].lon;
+
+    if (!name || !lat || !lon) {
+      throw new Error(`name, lat, or lon is missing for city: ${city}`);
+    }
+
+    return {
+      name: data[0].name,
+      lat: data[0].lat,
+      lon: data[0].lon,
+    };
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      `Could not find weather data for "${city}, ${stateCode || ""}, ${countryCode || ""}". Please check your spelling and formatting.\n\nValid examples include:\n${validFormats.join("\n")}`,
+    );
   }
-
-  return {
-    name: data[0].name,
-    lat: data[0].lat,
-    lon: data[0].lon,
-  };
 };
 
 export const extractWeatherData = async ({ name, lat, lon }) => {
   const weather = { current: {}, forecast: [] };
 
   const weatherPromise = await fetch(
-    `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+    `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`,
   );
 
   const data = await weatherPromise.json();
