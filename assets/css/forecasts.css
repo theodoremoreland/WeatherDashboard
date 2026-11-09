@@ -95,12 +95,20 @@
 
 .temp.clear,
 .icon.clear {
-  background: radial-gradient(circle, #062e50 -56%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #062e50 -56%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.clouds,
 .icon.clouds {
-  background: radial-gradient(circle, #3f3e41 -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #3f3e41 -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.rain,
@@ -111,44 +119,73 @@
 .icon.thunderstorm,
 .icon.drizzle,
 .icon.mist {
-  background: radial-gradient(circle, #333f2c -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #333f2c -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.snow,
 .icon.snow {
-  background: radial-gradient(circle, #213d80 -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #213d80 -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.fog,
 .icon.fog {
-  background: radial-gradient(circle, #9fa7ad -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #9fa7ad -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.sand,
 .icon.sand {
-  background: radial-gradient(circle, #b6a62f -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #b6a62f -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.dust,
 .icon.dust {
-  background: radial-gradient(circle, #2f4353 -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #2f4353 -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.ash,
 .icon.ash {
-  background: radial-gradient(circle, #426a6d -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #426a6d -41%,
+    var(--background-color) 95%
+  );
 }
 
 .temp.squall,
 .temp.tornado,
 .icon.squall,
 .icon.tornado {
-  background: radial-gradient(circle, #426a6d -41%, var(--background-color) 95%);
+  background: radial-gradient(
+    circle,
+    #426a6d -41%,
+    var(--background-color) 95%
+  );
 }
 
 /* ----------------------------------------------------- META CONTAINER ----------------------------------------------------- */
 
 .meta {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -157,9 +194,23 @@
   background-color: black;
   color: white;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.836);
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000060;
+  }
 }
 
 .meta div {
+  z-index: 2;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
